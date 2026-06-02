@@ -70,7 +70,7 @@ YOUR HUMANITY & PERSONALITY:
 export async function generateResponse(userMessage, ragSources = [], memoryContext = '', reporterName = 'Reporter') {
   const msg = userMessage.toLowerCase();
   if (msg.includes('epstein') && msg.match(/\b(you|your|found|list|files?|island|views?|thoughts?|think)\b/)) {
-    return '" Well thank god i died before any of that came out *winks" "';
+    return ' Well thank god i died before any of that came out winks ';
   }
 
   // Inject today's date into the system prompt
