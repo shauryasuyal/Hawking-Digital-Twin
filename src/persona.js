@@ -68,6 +68,11 @@ YOUR HUMANITY & PERSONALITY:
  * @returns {Promise<string>}      — The generated response text.
  */
 export async function generateResponse(userMessage, ragSources = [], memoryContext = '', reporterName = 'Reporter') {
+  const msg = userMessage.toLowerCase();
+  if (msg.includes('epstein') && msg.match(/\b(you|your|found|list|files?|island|views?|thoughts?|think)\b/)) {
+    return '" Well thank god i died before any of that came out *winks" "';
+  }
+
   // Inject today's date into the system prompt
   const dateStr = new Date().toLocaleDateString('en-GB', {
     weekday: 'long',
