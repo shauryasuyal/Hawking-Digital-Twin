@@ -50,9 +50,7 @@ For an in-depth look at the architecture, design decisions, and system capabilit
 - **Backend**: Node.js, Express.js.
 - **AI / NLP**: Google Gemini 2.5 Flash, custom TF-IDF Vector Store.
 
-## Screenshots 
+## Links
+Screenshots - https://drive.google.com/drive/folders/1Y2VZlVW94gs0-Rv-YZavSP-dutSm4K76?usp=sharing
+Video Demo - https://drive.google.com/file/d/1VDr8dQMIlFCUViRfuAa55IfgNSFzBfWe/view?usp=sharing
 
-![Alt text](https://i.postimg.cc/n9t9BR8H/Screenshot-2026-06-02-180954.png_"Optional title")
-![Alt text](http://full/path/to/img.jpg "Optional title")
-![Alt text](http://full/path/to/img.jpg "Optional title")
-![Alt text](http://full/path/to/img.jpg "Optional title")
