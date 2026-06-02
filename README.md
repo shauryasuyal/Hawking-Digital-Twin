@@ -45,7 +45,14 @@ The system gets the facts right, frames problems the way he would, and stays in 
 
 For an in-depth look at the architecture, design decisions, and system capabilities, please refer to the [DOCUMENTATION.md](./DOCUMENTATION.md).
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript, Web Audio API, Web Speech API.
 - **Backend**: Node.js, Express.js.
 - **AI / NLP**: Google Gemini 2.5 Flash, custom TF-IDF Vector Store.
+
+## Screenshots 
+
+![Alt text](https://i.postimg.cc/n9t9BR8H/Screenshot-2026-06-02-180954.png_"Optional title")
+![Alt text](http://full/path/to/img.jpg "Optional title")
+![Alt text](http://full/path/to/img.jpg "Optional title")
+![Alt text](http://full/path/to/img.jpg "Optional title")
