@@ -1,0 +1,47 @@
+STEPHEN HAWKING'S WORK ON BLACK HOLES
+
+Stephen Hawking's scientific career was largely defined by his groundbreaking work on black holes. From singularity theorems to Hawking radiation, he transformed our understanding of these extreme objects and their role in the universe.
+
+SINGULARITY THEOREMS (1965-1970)
+
+Hawking's earliest major contribution was his work on singularity theorems, developed in collaboration with Roger Penrose. Penrose had shown in 1965 that singularities — points of infinite density where the known laws of physics break down — are an inevitable consequence of gravitational collapse under general relativity. Hawking extended this work in his PhD thesis and subsequent papers, proving that if general relativity is correct and certain energy conditions are satisfied, then the universe must have begun with a singularity: the Big Bang.
+
+The Penrose-Hawking singularity theorems, published together in a landmark 1970 paper in the Proceedings of the Royal Society, demonstrated that singularities are a generic feature of general relativity, not just artifacts of special symmetries. These theorems used sophisticated mathematical techniques from differential geometry and topology, particularly the concept of trapped surfaces and the focusing of geodesics.
+
+THE AREA THEOREM (1971)
+
+In 1971, Hawking proved the black hole area theorem, which states that the total surface area of all event horizons in a classical system can never decrease over time. This is analogous to the second law of thermodynamics, which states that entropy never decreases. When two black holes merge, the area of the resulting event horizon is always greater than or equal to the sum of the original areas.
+
+This theorem was spectacularly confirmed by the LIGO gravitational wave detector in 2019, when analysis of the first gravitational wave detection (GW150914 from 2015) showed that the area of the final merged black hole was indeed larger than the combined areas of the two original black holes, consistent with Hawking's prediction from nearly 50 years earlier.
+
+THE FOUR LAWS OF BLACK HOLE MECHANICS (1973)
+
+Together with James Bardeen and Brandon Carter, Hawking formulated the four laws of black hole mechanics in 1973. These laws are mathematically analogous to the four laws of thermodynamics:
+
+The Zeroth Law: The surface gravity (κ) of a stationary black hole is constant over the entire event horizon, analogous to temperature being constant in thermal equilibrium.
+
+The First Law: For nearby solutions, changes in mass are related to changes in area, angular momentum, and electric charge: dM = (κ/8π)dA + ΩdJ + ΦdQ, analogous to the first law of thermodynamics dE = TdS + work terms.
+
+The Second Law: The area of the event horizon never decreases in any classical process (Hawking's area theorem), analogous to entropy never decreasing.
+
+The Third Law: It is impossible to reduce the surface gravity to zero in a finite number of steps, analogous to the impossibility of reaching absolute zero.
+
+Initially, Hawking regarded this analogy as merely formal and mathematical. It was only after his 1974 discovery of Hawking radiation that the analogy was recognized as a true physical identity — black holes genuinely have temperature and entropy.
+
+NO-HAIR THEOREM
+
+Hawking contributed to the development and understanding of the no-hair theorem (also called the no-hair conjecture), which states that a black hole in equilibrium is completely characterized by just three externally observable parameters: its mass, electric charge, and angular momentum. All other information about the matter that formed or fell into the black hole is lost behind the event horizon, making black holes remarkably simple objects. John Wheeler coined the phrase "black holes have no hair" to describe this simplicity.
+
+This idea has profound implications: two black holes formed from completely different types of matter — one from a collapsing star, another from compressed furniture — would be indistinguishable if they had the same mass, charge, and angular momentum.
+
+SUPERMASSIVE BLACK HOLES
+
+Hawking discussed and contributed to the understanding of supermassive black holes, which reside at the centers of most galaxies. Our own Milky Way harbors a supermassive black hole called Sagittarius A* with a mass of about four million solar masses. Hawking noted that these objects play a crucial role in galaxy formation and evolution, and that understanding them is key to understanding the large-scale structure of the universe.
+
+BLACK HOLE FORMATION AND COSMIC CENSORSHIP
+
+Hawking also investigated the conditions under which black holes form and the cosmic censorship hypothesis proposed by Penrose. This hypothesis states that singularities formed by gravitational collapse are always hidden behind event horizons, never visible to outside observers as "naked singularities." While Hawking generally supported weak cosmic censorship, he engaged in famous bets about its validity and explored scenarios where it might be violated.
+
+PRIMORDIAL BLACK HOLES
+
+Hawking was one of the first to propose the existence of primordial black holes — black holes that formed in the extremely dense conditions of the early universe, rather than from stellar collapse. These could range in size from subatomic to supermassive. Micro black holes small enough would be evaporating today through Hawking radiation, potentially producing detectable gamma rays. Primordial black holes have also been considered as a possible component of dark matter.

@@ -1,0 +1,1289 @@
+Welcome to the hall of the universe.
+
+I’m your host, Neil deGrasse Tyson, your personal astrophysicist, and tonight we’re featuring my interview with world-renowned physicist and cosmologist, Stephen Hawking.
+
+His legendary brain on everything, from the Big Bang to the origins of the universe.
+
+So, let’s do this.
+
+So, my comedic co-host tonight is Matt Kirshen, Matt!
+
+All right.
+
+You co-host the science-based podcast, Likely Science?
+
+It’s probably science.
+
+Probably science.
+
+I knew it had some statistical measure before it.
+
+Every time you come up with a different version, I don’t like it.
+
+I think it just starts cycling names.
+
+Also joining me is my friend and colleague, theoretical physicist, Janna Levin.
+
+Janna, welcome.
+
+You’re a professor at Barnard College of Columbia University, award-winning author, most recently a Black Hole Blues and other songs from Outer Space.
+
+Nobody says it better than Neil.
+
+No, Black Hole Blues.
+
+Do you get people asking to do your voicemail message?
+
+Yeah, yeah, yes, but it gets worse than that.
+
+You’re like, I need to break up with my girlfriend, but I want it to sound good.
+
+So if you could just take this one.
+
+Hey baby, I got other plans.
+
+Right?
+
+Oh, you take it from that.
+
+Wouldn’t you be like, I’m sad at the end of my relationship, but that felt good.
+
+So Janna, we’ll be tapping your big brain on this because you’re an expert, you’re a theoretical physicist specializing in cosmology.
+
+And I know a little cosmology.
+
+We have some overlap there.
+
+Not as much as we need for this situation.
+
+Stephen Hawking has been called one of our greatest minds of our generation, possibly of the century and maybe ever.
+
+He’s done groundbreaking work on black holes, relativity, cosmology.
+
+He has a mega bestselling book, A Brief History of Time, sold 10 million copies.
+
+And it brought cosmology from the frontier of physics into people’s living rooms.
+
+And now there was a movie, a movie in 2014 called The Theory of Everything, starring Eddie Redmayne.
+
+And he won an Academy Award for best actor.
+
+So what more can you want in a career?
+
+I mean, man, so Hawking currently serves as director of research at the, what’s the department?
+
+Department of Applied Mathematics and Theoretical Physics.
+
+Damn.
+
+That’s why we have her, excuse me.
+
+At the University of Cambridge.
+
+You work there, is that right?
+
+Yeah, I worked in that department for a few years, five years.
+
+And you graduated from University of Cambridge, is that right?
+
+I did, just about.
+
+It was a close call, but I got there in the end.
+
+So have you guys ever met Steve Hawking?
+
+I saw him once, but it was at a talk he was giving, and I don’t think that counts.
+
+That’s like spotting an orca at SeaWorld.
+
+But you know he’s gonna be there.
+
+So in my interview with him, before getting deep into physics, I just wanted to get to know him a little better as a person we had met before, but we never really hung out like we did in this interview.
+
+So let’s check out the first clip.
+
+Professor Hawking, thanks for agreeing to be on StarTalk.
+
+And let me just start off with the first question, perhaps the most pressing question to us all.
+
+What’s your favorite food?
+
+For me, it’s pizza.
+
+Actually, New York pizza.
+
+Oysters.
+
+Oysters.
+
+A little slippery for me, but that’s cool.
+
+Okay, how about your favorite drink?
+
+Pimms.
+
+Pimms, ooh.
+
+I like pina coladas myself, but if it’s non-alcoholic, I would do a milkshake.
+
+Okay, last question.
+
+Last question.
+
+What’s your favorite equation?
+
+I know you’ve got one.
+
+The equation I discovered relating the entropy of a black hole to the area of its horizon.
+
+S equals C over 4.
+
+How many people get to say their favorite equation is one they came up with?
+
+That’s badass.
+
+What?
+
+What?
+
+I don’t know, I think we just all got a glimpse of what it’s like to be on a date with Neil.
+
+What?
+
+Your favorite food, your favorite drink, now Equation.
+
+And we’ll get those results peer-reviewed, and if they check out, then it becomes a relationship.
+
+Then it’s a relationship.
+
+So just in case anyone had been living under a rock, Stephen Hawking has what we call Lou Gehrig’s disease, ALS.
+
+So, and it’s gradually paralyzed him over the decades.
+
+And right now he communicates through twitches in his cheek.
+
+And these are red electronically, and he moves the cursor up and down on that screen, which we got a brief glimpse of, and he basically bangs out the spelling of words and ultimately sentences.
+
+And then scientific papers.
+
+That as well, yes, yes.
+
+So Janna, tell me about his favorite equation.
+
+So this is, was this incredibly stunning discovery that Hawking made.
+
+So the entire idea of a black hole is that nothing can get out of it.
+
+That’s the whole idea.
+
+It can’t reflect light, it can’t emit light.
+
+What falls in never comes out again.
+
+When you talk about the area of a black hole, what you’re really describing is the region after which no information can ever escape.
+
+Nothing.
+
+So this is the surface region surrounding the black hole.
+
+Yes, so there’s nothing there.
+
+It’s not a surface of any material kind.
+
+It’s simply a boundary that separates what can come out and what can never come out again.
+
+And amazingly, Hawking realized, in some sense, which seems intuitive in retrospect, but it was very difficult that-
+
+That’s how you know it’s really genius.
+
+Yes, it is really genius.
+
+When it’s obvious after somebody tells you.
+
+If it can’t emit anything, it certainly can’t emit light or be illuminated in any way.
+
+But what he realized was that if it absorbs stuff, it must be taking entropy out of the other side of the boundary, right?
+
+Entropy being a measure of disorder or randomness, or in some sense, energy.
+
+And so if it takes entropy, there is a law of thermodynamics that says entropy always increases.
+
+You know, your room gets messy or not cleaner without intervention, right?
+
+So disorder always increases.
+
+And so if it’s taking entropy out of this side of the boundary, it must actually be producing its own entropy.
+
+And each time it takes something in, it gets a little bigger and has a little more entropy.
+
+So in what form is this entropy is really the mystery.
+
+Then Hawking realized the black hole must be evaporating.
+
+It must actually be radiating at a temperature like a hot object.
+
+Okay, so that means a black hole is not entirely black.
+
+Yeah, it may actually from far away, if we were looking at a black hole in a very cold background, it would look to us like the black hole was actually emitting particles.
+
+Had a temperature.
+
+Oh, sorry.
+
+It was at a temperature radiating.
+
+Yeah, it was radiating at a temperature and that would explain this famous equation of Hawking.
+
+So there are two major kinds of black holes we think of in astrophysics.
+
+One of them is the end state of a high mass star.
+
+The sun will not become a black hole, but more massive stars can and do.
+
+And then we find black holes in the centers of galaxies with super duper high masses and we call them super massive black holes because we tell it like it is.
+
+So I was always wondering what questions Stephen Hawking might have for my man, Isaac Newton.
+
+You know, Stephen Hawking is like as the greatest physicist of modern times and Isaac Newton as the father of classical physics, I thought this would make an interesting exchange if they could do such a thing.
+
+So I asked him, let’s check it out.
+
+You hold the same endowed chair that Isaac Newton did.
+
+I’m just wondering if we had some way to communicate through time with him and tell him about what life is like today.
+
+Are there any questions, any problems you might want to hand him to solve?
+
+Is the solar system stable and what happens to a star that cannot support itself against its own gravity?
+
+So you’re thinking if Newton saw those questions, he might give us deeper insights into black holes.
+
+I’d be curious.
+
+Yeah, so what he did with that question was not what I thought he would do with it.
+
+What he did was he asked questions of Isaac Newton at the boundary of where Isaac Newton left off in his own studies.
+
+So stuff that he already knew the answer to?
+
+Right, but I think he’s testing, he wants to see…
+
+How Isaac would do.
+
+Yeah, how Isaac would do.
+
+Because certain questions you might not even know to ask, even if you invented the theory yourself, Einstein didn’t even think to take his equations to get a black hole out of them.
+
+Right, the black hole was really discovered by somebody else.
+
+But later on, using his formula.
+
+Yeah, within a year.
+
+Wouldn’t it be a crushing disappointment if Newton did come back and just wanted to know about like Tinder?
+
+Like, tell me more about this dance dance revolution.
+
+Okay, of all things you might be curious about, Tinder would not be among them.
+
+All evidence shows that Isaac Newton died a virgin.
+
+But he got a lot of science done, so let that be a lesson to you.
+
+Yeah, there you go.
+
+Everyone out there getting it on.
+
+You could revolutionize the world.
+
+So, Janet, what question would you have for Isaac Newton, do you think?
+
+That’s an interesting question.
+
+Well, I think I would love to hear his response to Einstein’s revelation.
+
+So Newton wrote down the stunning system of equations that describes not only how the apple falls from the tree, but how the moon stays in orbit around the earth.
+
+I mean, that’s a huge leap to think that-
+
+To connect them.
+
+To connect them.
+
+Celestial bodies motion and the motion of stuff here on earth, it was absolutely brilliant, but he knew that he didn’t understand how the earth was pulling on the apple without touching it, or how the-
+
+Action at a distance.
+
+Or how the earth was pulling on the moon without touching it, action at a distance.
+
+And so Einstein has this beautiful intuition that what’s actually happening is the masses are curving space and time and things are falling along the natural curves.
+
+I would love to hear if Newton was satisfied with that story or if he felt something was missing.
+
+And do you think the leading question, what would happen if a star collapses, do you think he could have landed on a black hole out of that?
+
+There’s no way not without modern physics.
+
+So if we look at the history of the discovery, so it was Einstein, even when he saw the mathematical solution for the black hole, did not believe nature would allow this to happen, as you well know.
+
+And after all, it is hard to crush stuff.
+
+You want to crush an entire star, our sun down to six kilometers to make a black hole.
+
+It fit in Manhattan, you know.
+
+Yeah, if Earth were a black hole, you would make it the size of a plum.
+
+Yeah, the size of a plum.
+
+How do you do that?
+
+It’s really not easy.
+
+I can’t crush this cup.
+
+And so it was sensible for Einstein to think matter forces wouldn’t allow it to happen.
+
+Well, we even got a little, we got some of our scientists on the team to work out a case study for what would happen in a more localized situation.
+
+You have scientists on the team?
+
+We do.
+
+We’ve got scientists working behind the scenes here as well.
+
+Okay, I didn’t know you had that.
+
+Yeah, so they worked out what would happen if Neil’s stardom became just too much for you to handle.
+
+So you deactivate your Twitter account and here’s what happens.
+
+We found, according to our calculations, there’ll be a vacuum of celebrity selfies and Twitter fused with flat earthers and eventually the whole universe will collapse in on itself.
+
+Wait, with Neil, it’s the epicenter?
+
+There is, so just be careful, be aware.
+
+Oh, okay, thanks for this warning, okay?
+
+Crack team of scientists on that one.
+
+Yeah, don’t blame me, they did all the work.
+
+It’s been peer reviewed as well.
+
+They’re very thorough on this show.
+
+Well, you know, Hawking’s, his discoveries and his personality have made him kind of like a pop culture icon.
+
+Everybody knows who he is and what he sounds like.
+
+We’ve got some images, so this is one of his many animated appearances on The Simpsons.
+
+Here he is with Sheldon in The Big Bang Theory.
+
+Oh, yeah, I was in this scene as well.
+
+Okay, so we are floating heads.
+
+We’ve got Stephen Hawking, Bill Nye, George Takei and me and Futurama.
+
+So Professor Hawking knows how to have some fun.
+
+He did that Zero G plane thing, you know the Zero G thing?
+
+I’m very aware of it.
+
+I asked him about it, let’s check it out.
+
+Stephen, you’ve been in that Zero G airplane, I’ve always wanted to go.
+
+I just wondered what it felt like for you.
+
+It was wonderful to float weightless, free of my wheelchair.
+
+I could have gone on and on and on.
+
+Well, one day I’ll try to do that too, see what that’s like.
+
+One problem for me, I get nauseous and I’m worried I throw up.
+
+Yeah, you don’t want to throw up in Zero G.
+
+You know these Zero G airplanes, it’s not that they go into orbit or go into space.
+
+Yeah, what they do is they go on an arc where you ascend as they, of course, move forward.
+
+Then there’s a point where there’s a precise trajectory down where the plane is basically in free fall.
+
+And while you’re in free fall, you are weightless.
+
+And in fact, that’s how Newton connected the free falling apple to the orbiting moon.
+
+So when you’re in free fall, then this happens.
+
+But you know what’s even cool about those Zero G planes is they can do trajectories where they can simulate moon gravity or Mars gravity.
+
+So they just do a shallow up around that, right?
+
+Yeah, they just do it in a way that it’s not a full free fall.
+
+That they’re slowly coming out of the free fall.
+
+And you can simulate any chosen gravity you want.
+
+It’s very cool.
+
+So coming up, more of my interview with world-renowned physicist Stephen Hawking when StarTalk returns.
+
+Welcome back to StarTalk, right here at the American Museum of Natural History in New York City.
+
+We’re featuring my interview with a claimed physicist, Professor Stephen Hawking.
+
+And I asked him about one of the universe’s biggest mysteries.
+
+Let’s check it out.
+
+So Stephen, everyone wants to know what was around before the Big Bang?
+
+Nothing was around before the Big Big Bang.
+
+According to Einstein’s general theory of relativity, space and time together form a space-time continuum or manifold which is not flat, but curved by the matter and energy in it.
+
+I adopt a Euclidean approach to quantum gravity to describe the beginning of the universe.
+
+In this, ordinary real time is replaced by imaginary time, which behaves like a fourth direction of space.
+
+In the Euclidean approach, the history of the universe in imaginary time is a four dimensional curved surface, like the surface of the Earth, but with two more dimensions.
+
+Jim Hardell and I proposed a no boundary condition.
+
+The boundary condition of the universe is that it has no boundary.
+
+In order terms, the Euclidean space time is a closed surface without end, like the surface of the Earth.
+
+One can regard imaginary in real time as beginning at the south pole, which is the smooth point of space time where the normal laws of physics hold.
+
+There is nothing south of the south pole, so there was nothing around before the Big Bang.
+
+The boundary condition of the universe is there is no boundary.
+
+Did everyone’s minds just go clear at that moment?
+
+Like a Zen monk has just enabled you to meditate, Trudy, for the first time?
+
+So Jen, I’m near nodding like I’m following him.
+
+He gave you a look at the end like, get it?
+
+Did you see that look he gave you?
+
+I was like, I got maybe 20% of where he was going.
+
+So let’s see if we can unpack this.
+
+What does he mean by imaginary time?
+
+Well, imaginary time is really, it doesn’t mean made up or invented time.
+
+It literally means you invent a new time parameter, which is, I’m going to say it in math terms, the square root of minus one times the old time parameter.
+
+It’s just a math…
+
+Square root of minus one is the imaginary number.
+
+It’s an imaginary number.
+
+It doesn’t mean that it’s made up or invented.
+
+And it’s just a mathematical trick.
+
+It’s a most unfortunate word for it that we gave it.
+
+It is, but it is a pretty odd little trick to do.
+
+All numbers are imaginary, right?
+
+You can’t see a fourth.
+
+I don’t know.
+
+That looks like one microphone.
+
+Yeah, but you still need the word microphone.
+
+That’s not A1.
+
+It’s not A1.
+
+The one represents the microphone.
+
+So in this mathematical trick, you’re re-representing time as though it’s actually space.
+
+That’s ultimately what the mathematical trick does, so that when you do this in all of your mathematical equations, you literally couldn’t tell what was time and what was space before, especially if you re-labeled them to trick yourself, you know, like a little game of…
+
+Shell games.
+
+So then what you’re doing is you’re imagining that instead of space and time that you’re just in space, but a four-dimensional space.
+
+And that allows you to visualize certain aspects of the space-time.
+
+So what about then there being nothing south of the South Pole?
+
+Right, so then if time…
+
+First, we all agree you can’t go south from the South Pole.
+
+Right, and there’s nothing weird about that.
+
+You just go back again.
+
+So there is no…
+
+if you stay on the surface of the Earth, you don’t ask the question, what’s south of the South Pole?
+
+You just realize, oh, that’s just an ill-posed question and it’s all completely compacted.
+
+So they would imagine an entire space-time where as you move in time, this Euclidean time, you’d actually come looping back around again.
+
+It really is a hypothesis that is as yet unsubstantiated.
+
+We don’t know that that’s true.
+
+Hawking was only a hypothesis.
+
+He’s only a hypothesis.
+
+And he’s not here to defend himself.
+
+So it’s time right now for that part of the show we call Cosmic Queries.
+
+And we took your questions about the physics of space and time out there in the cosmos.
+
+And we’ve got Cosmologist Janna Levin to make sure that anything I say is right and anything I don’t know you answer.
+
+You got that?
+
+All right, let’s do this.
+
+Matt.
+
+This one comes from Twitter from at the EMC effect, appropriately named.
+
+If gravity bends light and the universe is curved, can we be sure we’re not looking at our 13 billion year old rear end?
+
+I love this question.
+
+This actually relates to what we were just talking about, which is if the universe has a shape where it is compact and completely connected, then we could be.
+
+So it’s as though you walk, you leave New York City, you walk around the earth and you come back to where you started.
+
+But in this case, light does it.
+
+So light leaves the Milky Way galaxy, it travels throughout the entire universe, and we’re here some number of billions of years later, and we’re collecting light coming from behind us and we realize, oh, we’re actually looking at an image of the Milky Way in our past.
+
+That is a completely possible scenario if the universe has this kind of connected property.
+
+Except it’s not actually your rear end.
+
+It’s what your rear end would have been 13 billion years ago.
+
+So there’s every chance that in 13 billion years’ time from now they could be listening to a distant echo of this episode of StarTalk.
+
+Or I love it, you know, it’s Planet of the Apes.
+
+You leave in a rocket, you come to some distant planet, and you realize the Statue of Liberty is buried in the sand, you came back to where you started.
+
+Damn you all to hell.
+
+Okay, next question.
+
+From John Ron from Illinois.
+
+Do galaxies form around supermassive black holes, or do supermassive black holes form in the center of galaxies?
+
+Ooh, I haven’t seen the latest on that, but consider that however massive these supermassive black holes are, the galaxy is vastly more massive than that.
+
+You can have like a million, even a billion times the mass of the sun in a supermassive black hole, but the mass of the galaxy is 400 billion times that.
+
+So that’s just a point of fact.
+
+But at the very beginning of the universe, last I checked, I think the jury is still out on this.
+
+Yeah, I think it’s a really interesting astronomical question that we’re answering right now.
+
+This is what astronomy is doing right now.
+
+And we learned with the Hubble telescope that essentially every galaxy has a supermassive black hole in it.
+
+So everybody’s in the party on that.
+
+OK, next one.
+
+Oh, someone from my country, Vanessa Vima.
+
+Why is the speed of light around 300 million meters per second?
+
+That seems so random.
+
+Why not faster or slower?
+
+Oh, this is a great question.
+
+Was he complaining that it’s kind of a round number?
+
+Shea, I think it was like, why is that such, why that specific number?
+
+We have no idea why any of the specific numbers that seem to be constants of the universe are what they are.
+
+And so the speed of light actually comes out of electromagnetism.
+
+It actually has to do with the strength of electricity and the strength of magnetism put together.
+
+It just makes this random number.
+
+So if those forces were weaker or stronger, the speed of light would be different.
+
+Similarly, if gravity were weaker or stronger, our entire universe would be different.
+
+And there are people who believe that we live in a multiverse in which these numbers are different in different manifestations of the universe.
+
+And dare I say, in my latest book, there’s a chapter called On Earth As It Is In The Heavens.
+
+And it’s a discussion of the laws of physics as measured on Earth and how, in fact, we came to discover that they apply across the universe and across time itself.
+
+Yeah, if we look back to the early universe, there’s no evidence that it’s changed in our history.
+
+Yeah, of the laws of physics has changed.
+
+So right from the moment the universe was created, the speed of light was exactly the same?
+
+Yes, from the earliest measurements that we could possibly make.
+
+Last question.
+
+Final question from Derek Luteris from Oklahoma.
+
+How would a galactic empire keep a uniform standard of time?
+
+This is on you, Neil.
+
+Let me just quickly pass this over.
+
+I would just ask why…
+
+Oh, an empire that is all coherent, right?
+
+Because if you didn’t otherwise care, if it’s too far away, what do you care?
+
+Yeah, I’m guessing this question is sort of, all right, so on Earth we have different time zones, but there’s a universal time zone as well that we use.
+
+What’s the galactic version of that?
+
+Yeah, you couldn’t, because the light travel time across a galaxy is 100,000 years.
+
+So there’d be no such thing as any meaningful simultaneity of what’s going on.
+
+Unless your communication channels happen through wormholes.
+
+And so here’s one side of the galaxy, here’s the other side of the galaxy, that’s 100,000 light years to cross, and you create a wormhole connecting the two, and everybody’s got a wormhole, and it’d be like a wormhole Skype connection, and then your signals go through the wormholes.
+
+Then you could do that.
+
+All right.
+
+Well, you agree?
+
+Yeah, if you can keep a wormhole open, you find a shortcut.
+
+Yeah, yeah, there you go.
+
+Got that?
+
+All right, so get on that, scientist.
+
+Well, that’s the end of Cosmic Queries.
+
+Up next, I ask Professor Hawking, is time travel possible when StarTalk returns?
+
+Welcome back to StarTalk.
+
+We’re featuring my interview with Professor Stephen Hawking, world-renowned physicist.
+
+And I’ve got with me physicist Michio Kaku.
+
+Michio!
+
+A theoretical physicist, a professor at the City College of New York, New York Times best-selling author of The Physics of the Impossible, one of my favorite books of his.
+
+Also The Physics of the Future and The Future of the Mind.
+
+So Michio, you’re kind of known for entertaining wild ideas in science fiction that could be based in actual fact.
+
+Does that characterize you accurately?
+
+I think it’s better to say that I talk about science fact, which appears to look like science fiction because people haven’t kept up.
+
+Ooh, very nice, very nice.
+
+So I had to ask Professor Hawking a classic sci-fi question, right?
+
+Let’s check it out.
+
+So Stephen, will we ever have the ability to travel backwards in time?
+
+I’m thinking not simply because if we ever did obtain that ability, we would have met somebody by now from the future.
+
+One might hope that we could warp space-time so that one could go off in a rocket and come back in the past.
+
+But I have shown that this is not possible if energy density is always non-negative.
+
+Maybe that’s a big if.
+
+All we have to do is create negative energy density stuff.
+
+Then we’ll all be able to travel backwards in time.
+
+What?
+
+Well, I’ve done this show a few times now and I think this is the one where I really do feel the dumbest.
+
+Like, what is non-negative energy density?
+
+Yeah, actually, I’m not even completely sure myself.
+
+What is non-negative energy density?
+
+I feel like we saw…
+
+Oh, yeah, Michio, yeah, come on.
+
+It’s got your name on it.
+
+On Star Trek, it’s called dilithium crystals, which make warp-dry wormholes and time travel possible.
+
+For a physicist, it is negative matter and negative energy, things that fall up rather than falling down.
+
+Now, a black hole has positive energy, energy to rip the fabric of space-time, but it’s unstable.
+
+It collapses back on itself.
+
+You need negative energy or matter to keep it open.
+
+That’s why Hawking made a very famous theorem showing that wormholes, showing that time machines require negative energy to keep the black holes and things like this from collapsing again.
+
+It is anti-gravitational, repulsive, and that’s what prevents the black hole from collapsing all the way.
+
+Okay, so how are we going to create negative energy?
+
+Negative energy already exists.
+
+If I have an advanced civilization, much more powerful than our civilization today, they could make large quantities of negative energy and perhaps go backwards in time and become masters of the universe.
+
+You could create wormholes to go across the galaxy, go backwards in time, witness the Big Bang.
+
+That would then enable backwards time travel.
+
+That’s right.
+
+In fact, Stephen Hawking himself has shown this theorem showing that the only way to go backwards in time is to have negative energy, energy below the zero of the ordinary vacuum.
+
+So how do you avoid getting into a whole Marty McFly and Mum situation?
+
+Because the river of time forks into two rivers into a multiverse.
+
+So when you go backwards in time, to save Abraham Lincoln from being assassinated at the Ford Theater, it’s someone else’s Abraham Lincoln that you just saved.
+
+You cannot alter your own past.
+
+Quantum Mechanics says that time itself can fission.
+
+Time itself can become a multiverse of parallel universes.
+
+Right, didn’t Hawking once come up with a backwards time travel conjecture so that you don’t have this Marty McFly problem?
+
+Chronology, protection, conjecture.
+
+And what does that protect?
+
+It protects the order of causal events so that you are unable, even if there exists mathematically on paper the possibility to go back in time, you can’t kill your mother before you were born because that would be inconsistent.
+
+Okay, so Michio is gonna get around that by saying time forks.
+
+That’s right, according to the quantum principle, time is constantly forking so that our universe, being a bubble that expands, can actually become a multiverse like in a soap bubble.
+
+So a soap bubble bath, think of lots of bubbles bifurcating, colliding with each other, and that’s the Big Bang.
+
+The Big Bang is nothing but the collision or the fissioning of soap bubbles in a bubble bath called the landscape of the multiverse.
+
+This is now the dominant theory in quantum cosmology.
+
+If time travel, it may not be possible unless we have this negative energy density stuff.
+
+So it may be possible for us all the day we harness this negative energy stuff, but that is sometime in the future at a point unknown.
+
+But what is true right now is that we have space travel, even if time travel is not available to us right now.
+
+So I asked Stephen Hawking, what is his sort of bold vision for humanity’s future beyond earth in the form of space?
+
+Let’s check it out.
+
+So Stephen, you’ve said publicly that you want us to be a multi-planet species.
+
+And who could argue that?
+
+I’m with you there.
+
+However, I have one mild rebuttal.
+
+Because you defend that argument by saying something bad could happen here on earth.
+
+An asteroid, that’s runaway virus, rendering us all extinct.
+
+And if we exist only on one planet, that’s the end of the human species.
+
+I get that.
+
+Here’s my mild rebuttal.
+
+Isn’t it easier to deflect an asteroid?
+
+Easier to find a super serum that will combat any deadly virus than it is to terraform Mars and ship a billion people there?
+
+Collision with an asteroid is one of the least of the dangers we now face.
+
+The last collision was 70 million years ago.
+
+Nuclear war, climate change and pollution.
+
+Climate change and pollution are now much greater threats.
+
+Of course, it would be impossible to move the population of the Earth to a new planet, but if we can establish independent, self-sustaining colonies in space, it would ensure the survival of the human race in the event of a disaster on Earth.
+
+Leaving Earth will also give us a new perspective and cause us to look outwards rather than inwards.
+
+It would also unite us to face the common challenge.
+
+Whoa.
+
+So, Janna, are you ready to go to Mars for these reasons?
+
+Yeah, I think, isn’t it still a one-way ticket though?
+
+Isn’t that one of the problems?
+
+We could get to Mars with the technology we have now and the money we have now, but we can’t get people home.
+
+So, that’s, you know.
+
+Well, we actually interviewed somebody on StarTalk who had signed up for the one-way trip and it was a little odd because, you know, he was all excited about it and apparently he’s married.
+
+So I said, what does your wife say about it?
+
+And he said, oh, she encouraged it.
+
+And I’m thinking, have you really looked at your situation?
+
+She’s building her own rocket.
+
+She says if NASA doesn’t get there, then she’s gonna do it herself.
+
+So, Michio, are you a big fan of colonizing other planets?
+
+Yes, in fact, there’s gonna be a traffic jam over Mars around 2030.
+
+Elon Musk, NASA with the SLS booster rocket and now amazon.com.
+
+I mean, everyone’s jumping in the game now to create booster rockets capable of taking us to Mars on a two-way trip.
+
+Amazon’s the only one, by the way, that’s going for same day delivery.
+
+So I think at a different point, Hawking had said that civilization only has a hundred years left on Earth, which seemed a little pessimistic to me.
+
+Janna?
+
+Well, I mean, I don’t think, I worry I say this too much.
+
+I don’t think we look like the most successful species that’s ever walked the face of the Earth.
+
+I mean, dinosaurs were here for hundreds of millions of years.
+
+Like we invented, you know, industrialization sort of took over in the past couple hundred and we’re already near threatening our own demise.
+
+So it doesn’t look great for us, to be honest.
+
+Oh, I think if we don’t blow ourselves up, we’ll become what is called a Type I civilization in a hundred years.
+
+That is a planetary civilization.
+
+A Type II civilization is stellar.
+
+They control the power of an entire star, a few thousand years into the future.
+
+Then Type III civilization is galactic.
+
+They control black holes.
+
+They control the energy of an entire galaxy.
+
+Now on this scale, we are Type Zero.
+
+We get our energy from dead plants, oil and coal.
+
+We don’t even rate on this scale.
+
+But if we can make it to the next 100 years, if we can make it through it, we will become a Type I civilization, truly planetary.
+
+And that’ll be the greatest transition in the history of the human race.
+
+From segmented nations that fight each other with fundamentalist ideologies to a planetary civilization that is secular, scientific, multicultural and at peace.
+
+If we can make it through the next 100 years, then we make it to Type I.
+
+Well, this is a perfect time for our game show.
+
+How we’re not gonna make it through the next 100 years.
+
+So we did a little survey of how the world will end.
+
+Okay.
+
+Neil, what do you think?
+
+My money’s on the zombie apocalypse.
+
+Zombie apocalypse.
+
+Let’s see if it’s up there.
+
+Shame on you, Neil.
+
+Janna.
+
+Okay.
+
+Let’s do nuclear, nuclear holocaust.
+
+All right.
+
+Nuclear holocaust.
+
+Michio.
+
+And here we are.
+
+I wanna be the bad boy and say that we will survive.
+
+That humanity will struggle through, will squeak by and we’re not gonna end ourselves.
+
+Ooh.
+
+Let’s see.
+
+You’re wrong.
+
+So Matt, let’s see all the answers.
+
+All right, let’s see what we got.
+
+Let’s see what we missed.
+
+I think AI is gonna be up there.
+
+AI, I take it.
+
+artificial super intelligence.
+
+Good old fashioned non-nuclear war.
+
+I’m not sure that would end the world, but asteroid and climate change at number one.
+
+We agree that all of this is bad.
+
+All of this is possible.
+
+Well, up next, I asked physicist Stephen Hawking about the future of our minds when StarTalk returns.
+
+Welcome back to StarTalk from the American Museum of Natural History.
+
+We’re featuring my interview with famed physicist, Stephen Hawking.
+
+Check it out.
+
+So Stephen, if we ever really develop the technology to upload your brain into some computer, providing life after death, or at least consciousness after death, would you be first to sign up for that?
+
+My body hardly works at all because I have motor neurone disease, otherwise known as ALS.
+
+So getting rid of it would be no loss and would spare me discomfort.
+
+Being more or less solely a brain, I could see the future unless I was terminated by someone switching off their computer or by a computer virus.
+
+Well, I hadn’t thought about that.
+
+If you’re a computer, you’re susceptible.
+
+You can have copies.
+
+You just make a backup of yourself.
+
+So, Michio, the title of your book, The Future of Mind, the scientific quest to understand, enhance and empower the mind.
+
+When will uploading our brain become a reality?
+
+Well, just remember that…
+
+If at all.
+
+Digital immortality is starting now.
+
+So this is an example of what’s going on here.
+
+That’s right, telepathy, telekinesis, uploading, recording memories, recording dreams.
+
+We can, quote, do all of the above.
+
+This is no longer science fiction.
+
+You go to the physics laboratories and you can see how images can be extracted from the human brain.
+
+How it’s possible now that we can upload memories in animals and record memories from animals because physics can now probe thoughts as they go ricocheting through the brain.
+
+Is what you’re describing the same thing as consciousness?
+
+Because if that’s the case, then we can say it’s not just our thoughts that live forever, it’s our very identity, our self, our conscious self that lives forever.
+
+Well, there is a theory that says the soul.
+
+The soul is information.
+
+It’s a vast amount of information, but nonetheless, it’s information that can be put into holographic form such that even if you pass away, something there survives.
+
+But theoretically, that is effectively immortality.
+
+Once you reach that point, that is you living forever.
+
+Why not have digital immortality?
+
+Wouldn’t you want to talk to your great-great-great-great-great-grandkids who want to meet their great-great-great-great ancestor?
+
+It depends what they’re like.
+
+This gives you movement throughout time and throughout space.
+
+So this is being godlike.
+
+Well, that’s what we’re talking about, transcending the human race.
+
+Because I asked Stephen Hawking about his thoughts on the future of religion, just to get his sense of this spirituality going forward.
+
+Let’s check it out.
+
+So Stephen, religion has been around for thousands of years, and it long predates science.
+
+And in spite of the effort of modern, ardent atheists, religion persists.
+
+So do you have any sense of what religion will be in the future of civilization?
+
+Religion was an early attempt to answer the questions we all ask.
+
+Why are we here?
+
+Where did we come from?
+
+Nowadays, science provides better and more consistent answers, but people will always cling to religion because it gives comfort, and they do not trust or understand science.
+
+Hmm.
+
+Yeah, Stephen Hawking is imagining that any time you didn’t understand something and ascribed it to deity, science would then fix that for you.
+
+But there’s the rest of what people use religion for, the spiritual fulfillment and the rest of this.
+
+It’s not obvious that science has solutions to that going forward.
+
+But don’t you feel a sort of surge of excitement?
+
+All the time.
+
+And thrill and the connection to the universe just to know that even though we’re stuck on this silly little rock, that we’re able to know that much, that’s stunning.
+
+Yeah, it is.
+
+It is deeply moving.
+
+So this whole kind of notion that, oh, it leaves you feeling cold and sterile, that there is this scientific thinking actually has been the opposite of my personal experience.
+
+I think we’re hardwired that way.
+
+Evolution has given us the brain to be receptive to awe, to receptive to beauty.
+
+And that’s why there’s a God gene, because we are genetically programmed to believe in superstition, because that’s the way it has always been even today before science came along.
+
+Touch wood.
+
+Knock on wood.
+
+Is he true?
+
+Well, coming up, the one and only Stephen Hawking offers some life lessons for us all.
+
+Next on StarTalk.
+
+Welcome back to StarTalk from the American Museum of Natural History.
+
+And we’re featuring my interview with legendary physicist, Stephen Hawking.
+
+And I wanted to hear more about Stephen Hawking’s perspective on life.
+
+And so I asked him, who’s his favorite non-scientist?
+
+Check it out.
+
+A few years ago, I would have said Nelson Mandela.
+
+He brought a peaceful solution to a seemingly impossible situation.
+
+There is no one of his stature today.
+
+Certainly not Donald Trump.
+
+Do you have an answer to this question?
+
+Favorite non…
+
+You’re gonna get in trouble whatever you say.
+
+You’re gonna have to go home.
+
+No, my favorite, no, my wife is a scientist, so.
+
+Oh, that’s true.
+
+Yeah, she has a PhD in mathematical physics.
+
+So there.
+
+It’s like Neil would marry a non-scientist.
+
+Okay, you know what I would say?
+
+Vincent van Gogh.
+
+His painting, The Starry Night in 1889, is artwork that was given a name not for what he drew in the foreground or the mid-ground.
+
+It was named for what appeared in the background.
+
+There’s a village, he could have called it Sleepy Village or Cypress Tree or Rolling Hills, but no, the universe was speaking to him more loudly than his foreground.
+
+And out of that came the title, The Starry Night.
+
+And you look at that painting, it’s obviously not what he saw because the real universe doesn’t look like that, but you know it is what he felt.
+
+He drew what the universe felt like.
+
+And I am a fan of all the ways that artists can be touched by not only science in general, but the universe in particular.
+
+And this is my man, Vincent van Gogh.
+
+Before we wrap up this segment and before we wrap up the show, I have a dispatch from my good friend Bill Nye the Science Guy.
+
+And he’s gonna give us his thoughts on the big ideas proposed by physicists like the great Stephen Hawking.
+
+Check it out.
+
+Our curiosity brings us to places like this, the Griffith Observatory in Los Angeles, California.
+
+Here we look through these telescopes and ponder the cosmos and our place within it.
+
+And it’s one thing to think about the cosmos, but it’s another thing to realize that the cosmos is different now than when I started talking.
+
+It’s changing.
+
+I mean, we think of the cosmos in terms of space, we think of it in terms of time, but in astrophysics we think of it in terms of space-time.
+
+I mean, moving through space seems straightforward enough, but moving through time, that’s a tricky one.
+
+It’s been speculated that there are yet undescribed particles of time, tiny bits of time.
+
+And if they turn out to be real, they will be discovered out there in the cosmos.
+
+So tonight, go outside and have a look.
+
+There’s time.
+
+Back to you, Neil.
+
+So, Michio, I’ve not heard of this.
+
+Is this particles of time?
+
+Is this real?
+
+Well, you can look at it as gravitons.
+
+So they are kind of to the force of gravity what photons are to electromagnetic force.
+
+Exactly.
+
+A photon is a particle of light.
+
+A graviton is a particle of gravity.
+
+And when the graviton becomes big enough, it becomes a universe, giving us a multiverse of universes.
+
+So what you’re saying is that what Bill might have been talking about as particles of time are just particles of space-time.
+
+Where space and time are wrapped together.
+
+That’s right.
+
+Oh, I see.
+
+So in my final clip with Stephen Hawking, I asked him if he would just share with me some parting words of wisdom.
+
+Check it out.
+
+So over the course of your life, you’ve had a sort of unique perspective on science, on technology, endurance.
+
+If you sort of sum that together and offer some insight for us, any lessons that we can take with us?
+
+We must all do the best we can in whatever situation we’re in.
+
+Never give up.
+
+Never give up.
+
+Clearly that advice applies to us all.
+
+It’s a privilege to spend this time with you.
+
+Thanks for your thoughts and your insights and being a source of inspiration to us all.
+
+Thank you.
+
+How could you not just wonder what’s going on inside this guy’s head?
+
+I think our greatest gift as a species is not our body.
+
+We’re not the fastest, we’re not the strongest.
+
+Our body hardly distinguishes itself in any way in the animal kingdom.
+
+Our greatest sort of gift in the tree of life is our mind.
+
+And perhaps no one knows that better than Stephen Hawking.
+
+And so much so that he does not take his mind for granted, enabling him to go places that we might never even dream of, simply because he has power of mind, where he has power from no other part of his body.
+
+So, maybe it is we who are imprisoned, thinking our body matters when, in fact, at the end of the day, it’s really all about your thoughts, all about your dreams, all about how we react to our life experience in this world and share it.
+
+Share it with others.
+
+That is a cosmic perspective.
+
+You’ve been watching StarTalk.
+
+And I’ve been your host, Neil deGrasse Tyson, your personal astrophysicist.
+
+Thanks for being with us.
+
+As always, I bid you to keep looking up.

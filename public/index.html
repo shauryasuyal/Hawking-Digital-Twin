@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Digital Twin of Stephen Hawking — An immersive AI experience where you interview the legendary physicist in his Cambridge office.">
+  <title>Stephen Hawking — Digital Twin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- RAG Progress Bar -->
+    <div id="rag-progress-container" class="rag-progress-container hidden">
+      <div class="rag-progress-label" id="rag-progress-label">Initialising Knowledge...</div>
+      <div class="rag-progress-track">
+        <div class="rag-progress-fill" id="rag-progress-fill"></div>
+      </div>
+    </div>
+
+  <!-- Onboarding Screen -->
+  <div id="onboarding-screen" class="onboarding-screen">
+    
+    <!-- Phase 1: Name Input -->
+    <div id="onboarding-phase-1" class="onboarding-phase">
+      <h1 class="onboarding-title" style="font-family: 'Special Elite', serif; font-weight: 400; font-size: 2.2rem; color: #fcd34d;">Professor S. W. Hawking</h1>
+      <p class="onboarding-subtitle" style="font-size: 0.95rem; line-height: 1.4; color: #cbd5e1; margin-bottom: 2rem;">
+        Lucasian Professor of Mathematics, Emeritus<br>
+        Centre for Theoretical Cosmology<br>
+        <span style="display: block; margin-top: 1rem; color: #94a3b8; font-style: italic;">Visitor Sign-in:</span>
+      </p>
+      <div class="onboarding-input-group">
+        <input type="text" id="reporter-name-input" class="onboarding-input" placeholder="Enter your name..." autocomplete="off">
+        <button id="btn-next-phase" class="btn-primary">Next</button>
+      </div>
+    </div>
+
+    <!-- Phase 2: Context -->
+    <div id="onboarding-phase-2" class="onboarding-phase hidden">
+      <h2 class="onboarding-context-title" style="font-family: 'Special Elite', serif; font-weight: 400; color: #fcd34d;">Office Hours</h2>
+      <p class="onboarding-context-text" style="font-size: 1rem;">
+        Please wait. Professor Hawking is preparing for the interview.<br>
+        <span style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem; display: block;">(Digital Twin Interface Loading)</span>
+      </p>
+      <p class="onboarding-context-sub">Please wait while the knowledge base initializes...</p>
+      <div class="onboarding-status-container">
+         <div class="loading-bar-container">
+           <div class="loading-bar" id="onboarding-loading-bar"></div>
+         </div>
+      </div>
+      <button id="btn-enter-room" class="btn-primary hidden">Enter Room</button>
+    </div>
+    
+  </div>
+
+  <!-- Main Scene -->
+  <div id="app" class="app hidden">
+    <!-- Ambient particles (stars) -->
+    <div class="ambient-particles" id="particles"></div>
+
+    <!-- Aspect Ratio Container -->
+    <div class="scene-container">
+      <!-- Office Background Layer -->
+      <div class="scene-layer scene-background">
+        <img src="/assets/chat.png" alt="Hawking's Cambridge Office" class="office-bg-img" id="office-bg">
+      </div>
+    <div class="scene-layer scene-character">
+      <div class="hawking-container" id="hawking-container">
+        <!-- Character is now merged into the background. Screen is positioned over the background screen. -->
+        
+        <!-- Wheelchair Computer Screen -->
+        <div class="wheelchair-screen" id="wheelchair-screen">
+          <div class="screen-bezel">
+            <div class="screen-header">
+              <div class="screen-dot red"></div>
+              <div class="screen-dot yellow"></div>
+              <div class="screen-dot green"></div>
+              <span class="screen-title">EqualS v3.0 — Speech Synthesizer</span>
+            </div>
+            <div class="screen-content" id="screen-content">
+              <!-- Empty until response -->
+            </div>
+          </div>
+          <!-- Thinking indicator -->
+          <div class="thinking-indicator hidden" id="thinking-indicator">
+            <div class="thinking-dot"></div>
+            <div class="thinking-dot"></div>
+            <div class="thinking-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div> <!-- End scene container -->
+
+    <!-- Settings Button -->
+    <button class="btn-icon btn-settings" id="btn-memory" title="Settings">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+      </svg>
+    </button>
+
+    <!-- Reporter Notebook (Input Area) -->
+    <div class="notebook-container" id="notebook-container">
+      <div class="notebook">
+        <div class="notebook-spine"></div>
+        <div class="notebook-page">
+          <div class="notebook-header">
+            <span class="notebook-label">PRESS NOTEBOOK</span>
+            <span class="notebook-date" id="notebook-date"></span>
+          </div>
+          <div class="notebook-lines">
+            <div class="input-wrapper">
+              <textarea 
+                id="question-input" 
+                class="notebook-input" 
+                placeholder="Type your question to Professor Hawking..."
+                rows="2"
+                maxlength="2000"
+              ></textarea>
+            </div>
+          </div>
+          <div class="notebook-footer">
+            <span class="char-count" id="char-count">0 / 2000</span>
+            <div style="display: flex; gap: 10px;">
+              <button class="btn-icon" id="mic-btn" title="Dictate Question" style="width: 32px; height: 32px; padding: 6px; border: 1px solid #ccc; background: transparent; border-radius: 4px; cursor: pointer; color: #444;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" y1="19" x2="12" y2="23"></line>
+                  <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+              </button>
+              <button class="btn-icon" id="quick-mute-btn" title="Toggle Voice" style="width: 32px; height: 32px; padding: 6px; border: 1px solid #ccc; background: transparent; border-radius: 4px; cursor: pointer; color: #444;">
+                <svg id="icon-vol-up" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: block;">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+                <svg id="icon-vol-mute" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <line x1="23" y1="9" x2="17" y2="15"></line>
+                  <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+              </button>
+              <button class="send-btn" id="send-btn" title="Ask Professor Hawking">
+                <span class="send-btn-text">Ask</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conversation History (floating side panel) -->
+    <div class="history-panel hidden" id="history-panel">
+      <div class="history-header">
+        <h3>Conversation</h3>
+        <button class="btn-icon btn-close-history" id="btn-close-history">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="history-content" id="history-content">
+        <!-- Conversation entries rendered here -->
+      </div>
+    </div>
+
+    <!-- Memory Dashboard (slide-in panel) -->
+    <div class="memory-panel hidden" id="memory-panel">
+      <div class="memory-header">
+        <h3>⚙️ Settings & Memory</h3>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-icon" id="btn-new-session" title="New Session" style="width: 24px; height: 24px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+          </button>
+          <button class="btn-icon btn-close-memory" id="btn-close-memory" style="width: 24px; height: 24px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="memory-content" id="memory-content">
+        <div class="memory-section">
+          <h4>Settings</h4>
+          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem;">
+            <input type="checkbox" id="toggle-voice" checked> Enable Voice Synthesizer
+          </label>
+        </div>
+        <div class="memory-section">
+          <h4>Session Info</h4>
+          <div class="memory-stats" id="memory-stats">
+            <div class="stat-card">
+              <span class="stat-value" id="stat-messages">0</span>
+              <span class="stat-label">Messages</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" id="stat-topics">0</span>
+              <span class="stat-label">Topics</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" id="stat-sessions">0</span>
+              <span class="stat-label">Sessions</span>
+            </div>
+          </div>
+        </div>
+        <div class="memory-section">
+          <h4>Topics Discussed</h4>
+          <div class="memory-topics" id="memory-topics">
+            <span class="topic-tag">No topics yet</span>
+          </div>
+        </div>
+        <div class="memory-section">
+          <h4>Long-Term Memories</h4>
+          <div class="memory-timeline" id="memory-timeline">
+            <p class="memory-empty">Memories will appear here as you converse...</p>
+          </div>
+        </div>
+        <div class="memory-section">
+          <h4>Conversation Log</h4>
+          <div class="memory-chat-log" id="memory-chat-log">
+            <p class="memory-empty">No messages yet...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sources tooltip -->
+    <div class="sources-tooltip hidden" id="sources-tooltip">
+      <h4>📚 Sources Referenced</h4>
+      <ul id="sources-list"></ul>
+    </div>
+  </div>
+
+  <script src="/js/mespeak/mespeak.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

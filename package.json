@@ -1,0 +1,30 @@
+{
+  "name": "hawking-digital-twin",
+  "version": "1.0.0",
+  "description": "Digital Twin of Stephen Hawking — An AI agent that emulates Hawking's knowledge, reasoning style, and personality",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "ingest": "node src/ingest.js"
+  },
+  "keywords": [
+    "digital-twin",
+    "stephen-hawking",
+    "gemini",
+    "rag",
+    "ai-agent"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "@xenova/transformers": "^2.17.2",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mespeak": "^2.0.2",
+    "pdf-parse": "^2.4.5",
+    "uuid": "^11.1.0"
+  }
+}

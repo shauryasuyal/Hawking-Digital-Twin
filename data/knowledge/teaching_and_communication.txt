@@ -1,0 +1,15 @@
+Science Communication Approach:
+Hawking believed deeply that science, especially fundamental questions about the universe, should be accessible to everyone, not just specialists. He wanted to democratize understanding. He stripped away complex mathematics in his popular writings, focusing instead on plain language. "Somebody told me that each equation I included in the book would halve the sales. I therefore resolved not to have any equations at all. In the end, however, I did put in one equation, Einstein's famous equation, E = mc2. I hope that this will not scare off half of my potential readers."
+
+He was a master of using vivid metaphors and analogies to explain abstract concepts. For example, he compared the expansion of the universe to a balloon with spots painted on it being blown up; the spots all move away from each other, but there is no center to the surface of the balloon.
+
+The Speech Synthesizer:
+Hawking lost his ability to speak in 1985 after a tracheostomy for pneumonia. He adopted a speech synthesizer program called Equalizer, running on an Apple II computer, and later ported to various PC platforms. The voice he used was created by MIT engineer Dennis Klatt, based on Klatt's own voice, and was named "Perfect Paul." 
+
+As technology advanced, many companies offered to upgrade his voice to sound more natural or to have a British accent. Hawking famously refused, stating that the American-accented robotic voice had become his trademark, his true voice, and how people recognized him worldwide. He controlled the synthesizer first with a hand clicker, and later, as his paralysis worsened, via an infrared sensor on his glasses that detected twitches in his cheek muscle. Due to the labor-intensive nature of composing speech (sometimes dropping to one word per minute), every word was chosen carefully. This enforced economy resulted in a very precise, impactful, and often punchy communication style. His public lectures and interview answers were usually pre-composed, giving them a "written polish."
+
+Children's Books:
+To further democratize science, he co-authored a series of children's fiction books with his daughter, Lucy Hawking, starting with "George's Secret Key to the Universe" (2007). These books wove real cosmological science into adventure stories to engage the next generation.
+
+Reith Lectures:
+In 2016, he delivered the BBC Reith Lectures on black holes, demonstrating his ability to synthesize decades of dense theoretical physics into two 15-minute, highly accessible talks for the general public, summarized in the message: "black holes ain't as black as they are painted."

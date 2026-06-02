@@ -1,0 +1,31 @@
+HAWKING RADIATION
+
+In 1974, Stephen Hawking made one of the most revolutionary discoveries in theoretical physics: black holes are not entirely black. They emit thermal radiation, now known as Hawking radiation, and can eventually evaporate completely. This discovery unified quantum mechanics, general relativity, and thermodynamics in an unprecedented way.
+
+THEORETICAL MECHANISM
+
+Hawking radiation arises from quantum effects near the event horizon of a black hole. In quantum field theory, the vacuum of space is not truly empty. Instead, it seethes with virtual particle-antiparticle pairs that constantly pop into existence and annihilate each other. These pairs normally exist for an incredibly brief time, borrowing energy from the vacuum in accordance with the Heisenberg uncertainty principle.
+
+Near the event horizon of a black hole, something remarkable happens. A virtual particle pair can be created such that one particle falls into the black hole while the other escapes to infinity. The particle that falls in effectively has negative energy relative to an observer at infinity, reducing the mass of the black hole. The escaping particle becomes real and carries positive energy away from the black hole. To a distant observer, the black hole appears to emit radiation.
+
+The radiation has a thermal spectrum, meaning it looks exactly like the radiation from a hot object. The temperature of this radiation is inversely proportional to the mass of the black hole, given by the Hawking temperature formula: T = ℏc³ / (8πGMk_B), where ℏ is the reduced Planck constant, c is the speed of light, G is Newton's gravitational constant, M is the mass of the black hole, and k_B is Boltzmann's constant.
+
+BLACK HOLE THERMODYNAMICS
+
+Hawking radiation established that black holes are thermodynamic objects with a well-defined temperature and entropy. Jacob Bekenstein had earlier suggested that black holes carry entropy proportional to their surface area, and Hawking's discovery confirmed this. The Bekenstein-Hawking entropy is given by S = kc³A / (4Għ), where A is the area of the event horizon. This was remarkable because it showed that the entropy of a black hole is proportional to its surface area, not its volume — a hint of what would later become the holographic principle.
+
+The four laws of black hole mechanics, which Hawking helped formulate with James Bardeen and Brandon Carter in 1973, turned out to be more than just an analogy with thermodynamics — they ARE thermodynamics. The zeroth law states that the surface gravity is constant over the event horizon. The first law relates changes in mass, area, angular momentum, and charge. The second law (Hawking's area theorem) states that the total area of event horizons never decreases in classical processes. The third law states that the surface gravity cannot be reduced to zero in a finite number of steps.
+
+BLACK HOLE EVAPORATION
+
+For stellar-mass black holes, the Hawking temperature is extraordinarily low — about 60 nanokelvins for a solar-mass black hole — making the radiation practically undetectable against the cosmic microwave background. However, as a black hole loses mass through Hawking radiation, its temperature increases. This creates a runaway process: the black hole gets hotter, radiates faster, gets even hotter, and eventually evaporates completely in a final burst of radiation.
+
+The lifetime of a black hole due to Hawking radiation is proportional to the cube of its mass. A solar-mass black hole would take approximately 10^67 years to evaporate — far longer than the current age of the universe (13.8 billion years). However, primordial black holes with masses less than about 10^12 kilograms, if they were formed in the early universe, could be evaporating today. The search for gamma-ray bursts from evaporating primordial black holes is an active area of observational astrophysics.
+
+CONNECTION TO THE INFORMATION PARADOX
+
+Hawking radiation led directly to the black hole information paradox. If a black hole evaporates completely and the radiation is purely thermal (random), then all information about what fell into the black hole is lost. This violates a fundamental principle of quantum mechanics called unitarity, which requires that information is never truly destroyed. Hawking initially argued that information was indeed lost, putting him at odds with most quantum physicists. This paradox remains one of the deepest unsolved problems in theoretical physics and has driven decades of research in quantum gravity, string theory, and the holographic principle.
+
+LEGACY
+
+Hawking radiation, though never directly observed, is one of the most important theoretical predictions of the twentieth century. It demonstrated that black holes are not eternal and that quantum mechanics has profound implications for gravity. Analog experiments using sonic black holes in Bose-Einstein condensates have observed effects analogous to Hawking radiation, providing indirect support for the theory. The discovery cemented Hawking's reputation as one of the greatest theoretical physicists since Einstein.
