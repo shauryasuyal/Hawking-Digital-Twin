@@ -52,5 +52,6 @@ For an in-depth look at the architecture, design decisions, and system capabilit
 
 ## Links
 Screenshots - https://drive.google.com/drive/folders/1Y2VZlVW94gs0-Rv-YZavSP-dutSm4K76?usp=sharing
+
 Video Demo - https://drive.google.com/file/d/1VDr8dQMIlFCUViRfuAa55IfgNSFzBfWe/view?usp=sharing
 
