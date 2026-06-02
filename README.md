@@ -3,14 +3,14 @@
 Welcome to the **AIMS DTU Summer Project 2026: Digital Twin of a Scientist**. 
 This project successfully implements a deeply authentic, interactive digital twin of Professor Stephen Hawking, bringing together his scientific knowledge, dry wit, and distinct communicative style.
 
-## 🌟 Overview
+## Overview
 
 Most chatbots answer in a generic voice. A Digital Twin is different: it feels like a specific person. 
 Our goal was to accurately emulate Stephen Hawking's knowledge, reasoning style, communication style, and research expertise, so that conversing with it feels like conversing with him. 
 
 The system gets the facts right, frames problems the way he would, and stays in character across a long conversation.
 
-## ✨ Core Features
+## Core Features
 
 - **Persona Adherence**: Driven by Gemini 2.5 Flash, the digital twin strictly adheres to Hawking's concise, heavily considered speech patterns (mimicking his 1 word-per-minute cheek-switch typing), his dry arrogance towards gibberish, and his profound cosmological worldview.
 - **RAG Pipeline (Retrieval-Augmented Generation)**: An in-memory vector database grounds his answers in his actual published works, books, and interviews.
@@ -22,7 +22,7 @@ The system gets the facts right, frames problems the way he would, and stays in 
 - **Immersive UI**: A cinematic interactive "waiting room" that gathers your name to dynamically inject it into the prompt.
 - **Memory Dashboard**: A visual slide-out dashboard allowing you to inspect what the AI remembers about you.
 
-## 🚀 Running Locally
+## Running Locally
 
 1. **Install Dependencies**
    ```bash
@@ -41,7 +41,7 @@ The system gets the facts right, frames problems the way he would, and stays in 
 4. **Access the Twin**
    Open `http://localhost:3000` in your web browser.
 
-## 📚 Documentation
+## Documentation
 
 For an in-depth look at the architecture, design decisions, and system capabilities, please refer to the [DOCUMENTATION.md](./DOCUMENTATION.md).
 
