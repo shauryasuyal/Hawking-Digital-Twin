@@ -26,17 +26,17 @@ The standard RLHF "helpfulness" of modern LLMs breaks the Hawking persona. We im
 - **"If a question is stupid, brutally insult the user"**
 - **"Maximum 2 to 3 short sentences per response."** 
 
-This forces the model to stay in character, emulating someone who types at 1 word per minute using a cheek switch.
+This forces the model to stay in character. Furthermore, we implemented a **Dynamic Off-Topic Streak Tracker** in the backend. If the user asks non-physics/non-science questions consecutively, the system passes a dynamic state variable to the prompt, escalating his tone from mildly annoyed to brutally grumpy.
 
 ### B. Retrieval-Augmented Generation (RAG)
-To ground answers in reality, we use a custom TF-IDF in-memory vector database.
-- **Data Ingestion**: The system reads `.txt` files (e.g., summaries of *A Brief History of Time*, Hawking's quotes, Q&As) from `/data/knowledge/` on server startup.
-- **Chunking**: Text is chunked into logical paragraphs.
+To ground answers in reality, we use a local AI embedding model (`@xenova/transformers` with `all-MiniLM-L6-v2`) to create a persistent vector database.
+- **Data Ingestion**: The system reads `.txt` files from `/data/knowledge/` on server startup. The knowledge base contains comprehensive summaries of **all 11+ books** he authored, and detailed abstracts of his entire **research paper history (1965–2018)**.
+- **Incremental Indexing**: The backend generates embeddings and saves them to `data/knowledge/vectorStore.json`. To prevent expensive rebuilds on every boot, it only parses files that haven't been indexed yet.
 - **Retrieval**: When the user asks a question, the system queries the vector store, finding the most relevant chunks using Cosine Similarity, and feeds them into the Gemini context window.
 
-### C. Two-Tier Memory System
-- **Short-Term**: An array of the last N turns kept in memory for the active session, providing immediate conversational continuity.
-- **Long-Term**: Periodically summarizes the chat into key "facts" about the user (e.g., "Reporter is asking about black holes") and saves to JSON in `/data/memory/`. Upon returning, these facts are retrieved and injected, allowing the Twin to "remember" previous conversations.
+### C. Multi-Session Memory System
+- **Client-Side Index (Short-Term & Navigation)**: A ChatGPT-style sidebar maintained in `localStorage` tracks multiple independent conversational sessions. It allows users to browse past chats, auto-names sessions based on their first prompt, and restores exact conversational states without a backend database login.
+- **Server-Side Store (Long-Term)**: Periodically summarizes the chat into key "facts" about the user (e.g., "Reporter is asking about black holes") and saves to JSON in `/data/memory/`. Upon returning, these facts are retrieved and injected, allowing the Twin to remember overarching conversational themes across different sessions.
 
 ## 3. Audio & Voice Emulation
 Hawking's voice is iconic. We emulate his 1980s hardware DECtalk synthesizer:
