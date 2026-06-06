@@ -16,6 +16,13 @@
   
   --transition-fast: 0.2s ease;
   --transition-normal: 0.4s ease;
+  
+  /* Fullscreen Dynamic Anchoring */
+  --aspect-ratio: 1.5; /* 1536 / 1024 */
+  --img-width: max(100vw, 100vh * var(--aspect-ratio));
+  --img-height: max(100vh, 100vw / var(--aspect-ratio));
+  --img-x: calc(50vw - var(--img-width) / 2);
+  --img-y: calc(50vh - var(--img-height) / 2);
 }
 
 /* Global */
@@ -242,7 +249,7 @@ body {
   flex-direction: column;
 }
 
-/* Aspect Ratio Container */
+/* Aspect Ratio Container (Default) */
 .scene-container {
   position: absolute;
   inset: 0;
@@ -253,6 +260,17 @@ body {
   max-width: calc(100vh * (1536 / 1024));
   overflow: hidden;
   background-color: black;
+}
+
+/* Fluid Mode Overrides */
+body.fluid-mode .scene-container {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: auto;
+  background-color: var(--bg-color);
 }
 
 .btn-settings {
@@ -305,6 +323,11 @@ body {
   object-fit: contain;
 }
 
+body.fluid-mode .office-bg-img {
+  object-fit: cover;
+  object-position: center;
+}
+
 /* Character */
 .scene-character {
   z-index: 20;
@@ -346,6 +369,13 @@ body {
   flex-direction: column;
   overflow: hidden;
   z-index: 25;
+}
+
+body.fluid-mode .wheelchair-screen {
+  left: calc(var(--img-x) + 0.54 * var(--img-width));
+  top: calc(var(--img-y) + 0.32 * var(--img-height));
+  width: calc(0.32 * var(--img-width));
+  height: calc(0.35 * var(--img-height));
 }
 
 /* CRT Screen Effect */
