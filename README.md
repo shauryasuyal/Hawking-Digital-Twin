@@ -12,15 +12,16 @@ The system gets the facts right, frames problems the way he would, and stays in 
 
 ## Core Features
 
-- **Persona Adherence**: Driven by Gemini 2.5 Flash, the digital twin strictly adheres to Hawking's concise, heavily considered speech patterns (mimicking his 1 word-per-minute cheek-switch typing), his dry arrogance towards gibberish, and his profound cosmological worldview.
-- **RAG Pipeline (Retrieval-Augmented Generation)**: An in-memory vector database grounds his answers in his actual published works, books, and interviews.
-- **Two-Tier Memory System**: 
-  - *Short-Term Memory*: Retains active conversational context up to 20 turns.
-  - *Long-Term Memory*: Extracts topics discussed and seamlessly re-injects them into future sessions.
+- **Persona Adherence**: Driven by Gemini (with user-provided API keys), the digital twin strictly adheres to Hawking's concise, heavily considered speech patterns, his dry arrogance towards gibberish, and his profound cosmological worldview. It includes a dynamic **Off-Topic Streak Tracker** that escalates his annoyance if you repeatedly ask non-physics questions.
+- **RAG Pipeline (Retrieval-Augmented Generation)**: Uses a local AI embedding model (`Xenova/all-MiniLM-L6-v2`) to perform semantic search over a massive offline knowledge base. The system includes full context on every book he authored and a comprehensive breakdown of all his major research papers (1965–2018).
+- **ChatGPT-Style Multi-Session Memory**: 
+  - *Browser Persistence*: Sessions are saved to `localStorage`, surviving browser refreshes without requiring user accounts.
+  - *Sidebar UI*: A slide-out panel allows you to view past chat sessions, seamlessly switch between them, or start a new conversation.
+  - *Long-Term Memory*: Summarizes the chat into key topics and seamlessly re-injects them into the backend context window.
 - **Voice Emulation**: Features a custom DSP pipeline (WaveShaper distortion, Peaking filters) over a Web Audio API port of `eSpeak` to acoustically recreate the exact hardware timbre of his legendary DECtalk speech synthesizer.
 - **Voice Input**: Talk to Hawking using your microphone instead of just typing.
 - **Immersive UI**: A cinematic interactive "waiting room" that gathers your name to dynamically inject it into the prompt.
-- **Memory Dashboard**: A visual slide-out dashboard allowing you to inspect what the AI remembers about you.
+- **Settings Dashboard**: Allows on-the-fly updating of Gemini API keys, clearing of conversation history, and voice/fluid-mode toggling.
 
 ## Running Locally
 
