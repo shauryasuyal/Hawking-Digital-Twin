@@ -116,7 +116,16 @@
     </div>
     </div> <!-- End scene container -->
 
-    <!-- Settings Button -->
+    <!-- Hamburger Button for Sessions (Top Left) -->
+    <button class="btn-icon btn-sessions-toggle" id="btn-sessions-toggle" title="Chat Sessions">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Settings Button (Top Right) -->
     <button class="btn-icon btn-settings" id="btn-memory" title="Settings">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="3"></circle>
@@ -193,16 +202,35 @@
       </div>
     </div>
 
+    <!-- Chat Sessions (left slide-out panel) -->
+    <div class="sessions-panel hidden" id="sessions-panel">
+      <div class="sessions-header">
+        <h3 style="margin:0; font-size:1.1rem;">Chat Sessions</h3>
+        <button class="btn-icon btn-close-sessions" id="btn-close-sessions" style="width: 24px; height: 24px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="sessions-new-btn-container">
+        <button id="btn-new-chat" class="btn-new-chat">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          New Session
+        </button>
+      </div>
+      <div class="sessions-list" id="sessions-list">
+        <!-- Session list items rendered here -->
+      </div>
+    </div>
+
     <!-- Memory Dashboard (slide-in panel) -->
     <div class="memory-panel hidden" id="memory-panel">
       <div class="memory-header">
         <h3>⚙️ Settings & Memory</h3>
         <div style="display: flex; gap: 10px;">
-          <button class="btn-icon" id="btn-new-session" title="New Session" style="width: 24px; height: 24px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 5v14M5 12h14"/>
-            </svg>
-          </button>
           <button class="btn-icon btn-close-memory" id="btn-close-memory" style="width: 24px; height: 24px;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M18 6L6 18M6 6l12 12"/>
@@ -222,7 +250,7 @@
 
           <!-- Update API Key -->
           <div style="margin-bottom: 14px;">
-            <label style="display:block; font-size:0.8rem; color:#94a3b8; margin-bottom:5px;">🔑 Gemini API Key(s)</label>
+            <label style="display:block; font-size:0.8rem; color:#94a3b8; margin-bottom:5px;">Gemini API Key(s)</label>
             <div style="display:flex; gap:6px;">
               <input type="password" id="settings-api-key-input" class="onboarding-input" placeholder="Paste new key(s) here..." style="flex:1; font-size:0.8rem; padding:6px 10px;">
               <button id="btn-update-api-key" style="background:#1e40af; color:#fff; border:none; border-radius:6px; padding:6px 10px; font-size:0.75rem; cursor:pointer; white-space:nowrap; font-family:inherit;">Update</button>
