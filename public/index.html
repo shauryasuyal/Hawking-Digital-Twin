@@ -216,9 +216,25 @@
           <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem; margin-bottom: 8px;">
             <input type="checkbox" id="toggle-voice" checked> Enable Voice Synthesizer
           </label>
-          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem;">
+          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem; margin-bottom: 16px;">
             <input type="checkbox" id="toggle-fluid-mode"> Enable Immersive Fullscreen Mode
           </label>
+
+          <!-- Update API Key -->
+          <div style="margin-bottom: 14px;">
+            <label style="display:block; font-size:0.8rem; color:#94a3b8; margin-bottom:5px;">🔑 Gemini API Key(s)</label>
+            <div style="display:flex; gap:6px;">
+              <input type="password" id="settings-api-key-input" class="onboarding-input" placeholder="Paste new key(s) here..." style="flex:1; font-size:0.8rem; padding:6px 10px;">
+              <button id="btn-update-api-key" style="background:#1e40af; color:#fff; border:none; border-radius:6px; padding:6px 10px; font-size:0.75rem; cursor:pointer; white-space:nowrap; font-family:inherit;">Update</button>
+            </div>
+            <div id="api-key-update-msg" style="font-size:0.75rem; color:#4ade80; margin-top:4px; display:none;">✓ Key updated successfully</div>
+          </div>
+
+          <!-- Clear Chat -->
+          <button id="btn-clear-chat" style="width:100%; background:transparent; border:1px solid #7f1d1d; color:#fca5a5; padding:7px 12px; border-radius:6px; font-size:0.82rem; cursor:pointer; font-family:inherit; transition:background 0.2s;"
+            onmouseover="this.style.background='rgba(127,29,29,0.3)'" onmouseout="this.style.background='transparent'">
+            🗑️ Clear Conversation History
+          </button>
         </div>
         <div class="memory-section">
           <h4>Session Info</h4>
