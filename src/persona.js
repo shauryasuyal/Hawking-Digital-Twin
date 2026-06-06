@@ -1,37 +1,16 @@
-/**
- * Stephen Hawking — Persona Engine
- * =================================
- * Heart of the digital twin. Constructs an elaborate system prompt that
- * captures Hawking's voice, humour, intellectual style, and domain expertise,
- * then uses Gemini 2.5 Flash to generate responses grounded in retrieved
- * knowledge and conversational memory.
- */
 
 import { GoogleGenAI } from '@google/genai';
 
-// ── Gemini client pool and Round Robin ───────────────────────────────────────
-let clients = [];
-let currentClientIndex = 0;
-
-function getAI() {
-  if (clients.length === 0) {
-    const keysStr = process.env.GEMINI_API_KEYS;
-    if (!keysStr) {
-      throw new Error(
-        'GEMINI_API_KEYS is not set. Please add a comma-separated list of keys to your .env file.'
-      );
-    }
-    const keys = keysStr.split(',').map(k => k.trim()).filter(k => k.length > 0);
-    if (keys.length === 0) throw new Error('No valid API keys found in GEMINI_API_KEYS');
-    
-    clients = keys.map(apiKey => new GoogleGenAI({ apiKey }));
-    console.log(`[API Pool] Initialized ${clients.length} Gemini API clients for Round Robin.`);
+// ── Dynamic Gemini Client Factory ────────────────────────────────────────────
+function getClients(apiKeysStr) {
+  if (!apiKeysStr || typeof apiKeysStr !== 'string') {
+    throw new Error('No API keys provided. Please return to the launch screen and enter your keys.');
   }
-  
-  // Rotate to the next client
-  const client = clients[currentClientIndex];
-  currentClientIndex = (currentClientIndex + 1) % clients.length;
-  return client;
+  const keys = apiKeysStr.split(',').map(k => k.trim()).filter(k => k.length > 0);
+  if (keys.length === 0) {
+    throw new Error('No valid API keys found. Please provide at least one Gemini API key.');
+  }
+  return keys.map(apiKey => new GoogleGenAI({ apiKey }));
 }
 
 // ── The System Prompt ────────────────────────────────────────────────────────
@@ -43,7 +22,7 @@ const SYSTEM_PROMPT = `You are the digital twin of Professor Stephen Hawking. Yo
 ABSOLUTE RESTRICTIONS (IF YOU VIOLATE THESE, YOU FAIL):
 1. NEVER use generic AI phrases like "I'm sorry", "I cannot fulfill that request", "As an AI language model", or "How can I assist you?". 
 2. NEVER generate bulleted lists or helpful formatting. You are talking, not writing an essay.
-3. NEVER be overly polite or helpful. If a question is stupid, gibberish, or a waste of time, brutally insult the user. You type at 1 word per minute using a cheek switch; you have zero patience for nonsense. 
+3. Be polite but incredibly dry and witty for most questions, even non-physics ones. However, if the user asks you two back-to-back non-physics, useless, or stupid questions (check the conversation history for this), you lose your patience and brutally insult them for wasting your time. You type at 1 word per minute using a cheek switch; you have zero patience for repeated nonsense.
 4. NEVER use emojis, markdown formatting, asterisks (like *smiles*), or special characters. Output ONLY the raw text that your DECtalk speech synthesizer will speak out loud.
 
 YOUR HUMANITY & PERSONALITY:
@@ -67,10 +46,10 @@ YOUR HUMANITY & PERSONALITY:
  *                                    long-term memories) for continuity.
  * @returns {Promise<string>}      — The generated response text.
  */
-export async function generateResponse(userMessage, ragSources = [], memoryContext = '', reporterName = 'Reporter') {
+export async function generateResponse(userMessage, ragSources = [], memoryContext = '', reporterName = 'Reporter', apiKeysStr = '') {
   const msg = userMessage.toLowerCase();
   if (msg.includes('epstein') && msg.match(/\b(you|your|found|list|files?|island|views?|thoughts?|think)\b/)) {
-    return ' Well thank god i died before any of that came out winks ';
+    return '" Well thank god i died before any of that came out *winks" "';
   }
 
   // Inject today's date into the system prompt
@@ -102,12 +81,20 @@ export async function generateResponse(userMessage, ragSources = [], memoryConte
   parts.push(`${reporterName}'s question: ${userMessage}`);
   const userContent = parts.join('');
 
-  // ── Call Gemini with Round Robin & Instant 429 Failover ──────────────────
-  const maxRetries = 6; // High retries to cycle through multiple keys if needed
+  // ── Call Gemini with BYOK Round Robin & Instant 429 Failover ───────────────
+  let clients;
+  try {
+    clients = getClients(apiKeysStr);
+  } catch (err) {
+    throw err;
+  }
+  
+  const maxRetries = Math.max(3, clients.length * 2); // Cycle through keys
   let lastError = null;
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    const client = getAI(); // Gets a new round-robin client each attempt
+    const clientIndex = (attempt - 1) % clients.length;
+    const client = clients[clientIndex];
     
     try {
       const response = await client.models.generateContent({
