@@ -55,6 +55,43 @@ document.addEventListener('DOMContentLoaded', () => {
     return pages;
   }
 
+  // ── Persistent identity ───────────────────────────────────────────────────
+  // Each browser gets a stable userId so the same visitor always resumes their session.
+  function getOrCreateUserId() {
+    let uid = localStorage.getItem('hawkingUserId');
+    if (!uid) {
+      uid = 'user_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+      localStorage.setItem('hawkingUserId', uid);
+    }
+    return uid;
+  }
+  const userId = getOrCreateUserId();
+
+  // ── Conversation history ────────────────────────────────────────────────────
+  // Stored in localStorage so it survives refreshes.
+  const HISTORY_KEY = `hawkingHistory_${userId}`;
+  const MAX_STORED_TURNS = 40; // keep last 40 exchanges in storage
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+    } catch { return []; }
+  }
+
+  function saveHistory(turns) {
+    // Trim to keep storage lean
+    const trimmed = turns.slice(-MAX_STORED_TURNS);
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(trimmed));
+  }
+
+  function clearHistory() {
+    localStorage.removeItem(HISTORY_KEY);
+    conversationHistory = [];
+  }
+
+  // In-memory mirror of what's in localStorage
+  let conversationHistory = loadHistory();
+
   // State
   let sessionId = null;
   let isTyping = false;
@@ -180,12 +217,35 @@ document.addEventListener('DOMContentLoaded', () => {
       initParticles();
       fetchMemoryDashboard();
       
-      // Auto-focus input
-      setTimeout(() => {
-        questionInput.focus();
-        speakAndTypePages(`Ah. So you are the reporter they sent to interview me, ${reporterName}?`);
-      }, 500);
-    }, 1500); // wait for door sound/fade
+      // ── Restore previous conversation ────────────────────────────────────────
+      const history = loadHistory();
+      if (history.length > 0) {
+        // Show the last Hawking response on the screen so it doesn't feel empty
+        const lastHawking = [...history].reverse().find(t => t.role === 'hawking');
+        if (lastHawking) {
+          screenContent.innerHTML = '';
+          const span = document.createElement('span');
+          span.textContent = lastHawking.text;
+          const cursor = document.createElement('span');
+          cursor.className = 'cursor-blink';
+          cursor.textContent = '_';
+          screenContent.appendChild(span);
+          screenContent.appendChild(cursor);
+        }
+        console.log(`[memory] Restored ${history.length} turns from localStorage`);
+      } else {
+        // Fresh visitor — play the greeting
+        setTimeout(() => {
+          questionInput.focus();
+          speakAndTypePages(`Ah. So you are the reporter they sent to interview me, ${reporterName}?`);
+        }, 500);
+      }
+
+      if (history.length > 0) {
+        // Returning visitor — just focus the input, no greeting
+        setTimeout(() => questionInput.focus(), 500);
+      }
+    }, 1500);
   });
 
   function pollRagStatus() {
@@ -216,11 +276,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function initSession() {
     isTyping = false;
     isWaiting = false;
-    screenContent.innerHTML = '';
     charCount.textContent = '0 / 2000';
     questionInput.value = '';
     
-    // Create new backend session
+    // Create new backend session (server allocates a fresh in-memory slot)
     fetch('/api/session', { method: 'POST' })
       .then(r => r.json())
       .then(data => {
@@ -396,6 +455,11 @@ document.addEventListener('DOMContentLoaded', () => {
       thinkingIndicator.classList.add('hidden');
       
       if (res.ok) {
+        // Save this exchange to localStorage for persistence
+        conversationHistory.push({ role: 'reporter', text, ts: Date.now() });
+        conversationHistory.push({ role: 'hawking', text: data.response, ts: Date.now() });
+        saveHistory(conversationHistory);
+
         // Coordinated output: Wait for both typing and speaking to finish before moving on
         await speakAndTypePages(data.response);
         // Refresh memory dashboard after he finishes speaking
@@ -670,6 +734,53 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingScreen.style.opacity = '1';
         appContainer.classList.add('hidden');
         initSession();
+      }
+    });
+  }
+
+  // ── Settings: Update API Key ───────────────────────────────────────────────
+  const settingsApiKeyInput = document.getElementById('settings-api-key-input');
+  const btnUpdateApiKey = document.getElementById('btn-update-api-key');
+  const apiKeyUpdateMsg = document.getElementById('api-key-update-msg');
+
+  if (btnUpdateApiKey && settingsApiKeyInput) {
+    // Pre-fill with current key (masked)
+    settingsApiKeyInput.placeholder = userApiKeys ? 'Current key set — paste to replace' : 'Paste new key(s) here...';
+
+    btnUpdateApiKey.addEventListener('click', () => {
+      const newKey = settingsApiKeyInput.value.trim();
+      if (!newKey) return;
+      userApiKeys = newKey;
+      localStorage.setItem('hawkingApiKeys', userApiKeys);
+      settingsApiKeyInput.value = '';
+      settingsApiKeyInput.placeholder = 'Current key set — paste to replace';
+      if (apiKeyUpdateMsg) {
+        apiKeyUpdateMsg.style.display = 'block';
+        setTimeout(() => { apiKeyUpdateMsg.style.display = 'none'; }, 3000);
+      }
+    });
+  }
+
+  // ── Settings: Clear Chat ───────────────────────────────────────────────────
+  const btnClearChat = document.getElementById('btn-clear-chat');
+  if (btnClearChat) {
+    btnClearChat.addEventListener('click', () => {
+      if (confirm('Clear your entire conversation history? This cannot be undone.')) {
+        clearHistory();
+        screenContent.innerHTML = '<span class="cursor-blink">_</span>';
+        // Tell the server to reset this session too
+        if (sessionId) {
+          fetch(`/api/session/${sessionId}`, { method: 'DELETE' })
+            .then(() => fetch('/api/session', { method: 'POST' }))
+            .then(r => r.json())
+            .then(d => { if (d.sessionId) sessionId = d.sessionId; })
+            .catch(e => console.error('Session reset error:', e));
+        }
+        // Close the panel and show a fresh screen
+        memoryPanel.classList.add('hidden');
+        setTimeout(() => {
+          speakAndTypePages('Memory cleared. A new interview begins.');
+        }, 300);
       }
     });
   }
