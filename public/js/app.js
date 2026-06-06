@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnNewSession = document.getElementById('btn-new-session');
   const particlesContainer = document.getElementById('particles');
   const toggleVoice = document.getElementById('toggle-voice');
+  const toggleFluidMode = document.getElementById('toggle-fluid-mode');
   const quickMuteBtn = document.getElementById('quick-mute-btn');
   const iconVolUp = document.getElementById('icon-vol-up');
   const iconVolMute = document.getElementById('icon-vol-mute');
@@ -109,13 +110,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const phase1 = document.getElementById('onboarding-phase-1');
   const phase2 = document.getElementById('onboarding-phase-2');
   const reporterNameInput = document.getElementById('reporter-name-input');
+  const apiKeysInput = document.getElementById('api-keys-input');
   const btnNextPhase = document.getElementById('btn-next-phase');
   const btnEnterRoom = document.getElementById('btn-enter-room');
   const micBtn = document.getElementById('mic-btn');
   const onboardingLoadingBar = document.getElementById('onboarding-loading-bar');
-  const onboardingContextSub = document.querySelector('.onboarding-context-sub');
 
   let reporterName = "Reporter";
+  let userApiKeys = "";
+
+  // Load saved keys
+  const savedKeys = localStorage.getItem('hawkingApiKeys');
+  if (savedKeys && apiKeysInput) {
+    apiKeysInput.value = savedKeys;
+  }
+
+  const howToKeyBtn = document.getElementById('how-to-key-btn');
+  const howToKeyModal = document.getElementById('how-to-key-modal');
+  const closeHowToBtn = document.getElementById('close-how-to-btn');
+
+  if (howToKeyBtn && howToKeyModal && closeHowToBtn) {
+    howToKeyBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      howToKeyModal.classList.remove('hidden');
+    });
+    closeHowToBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      howToKeyModal.classList.add('hidden');
+    });
+  }
 
   btnNextPhase.addEventListener('click', () => {
     if (reporterNameInput.value.trim() !== "") {
@@ -131,6 +154,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnEnterRoom.addEventListener('click', () => {
+    if (apiKeysInput && apiKeysInput.value.trim() !== "") {
+      userApiKeys = apiKeysInput.value.trim();
+      localStorage.setItem('hawkingApiKeys', userApiKeys);
+    } else {
+      alert("Please enter at least one Gemini API Key to enter the room.");
+      return;
+    }
+
     // Play door sound
     const audio = new Audio('https://actions.google.com/sounds/v1/doors/wood_door_open.ogg');
     audio.play().catch(e => console.log("Audio play blocked:", e));
@@ -173,7 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
           clearInterval(interval);
           setTimeout(() => {
             if (onboardingLoadingBar) onboardingLoadingBar.style.width = '100%';
-            if (onboardingContextSub) onboardingContextSub.textContent = "Knowledge base initialized.";
             btnEnterRoom.classList.remove('hidden');
           }, 500);
         }
@@ -358,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text, sessionId, reporterName })
+        body: JSON.stringify({ message: text, sessionId, reporterName, apiKeys: userApiKeys })
       });
       
       const data = await res.json();
@@ -580,6 +610,26 @@ document.addEventListener('DOMContentLoaded', () => {
       if (window.meSpeak) meSpeak.stop();
     }
   });
+
+  if (toggleFluidMode) {
+    // Load preference
+    const isFluid = localStorage.getItem('hawkingFluidMode') === 'true';
+    toggleFluidMode.checked = isFluid;
+    if (isFluid) {
+      document.body.classList.add('fluid-mode');
+    }
+    
+    // Toggle
+    toggleFluidMode.addEventListener('change', () => {
+      if (toggleFluidMode.checked) {
+        document.body.classList.add('fluid-mode');
+        localStorage.setItem('hawkingFluidMode', 'true');
+      } else {
+        document.body.classList.remove('fluid-mode');
+        localStorage.setItem('hawkingFluidMode', 'false');
+      }
+    });
+  }
 
   sendBtn.addEventListener('click', sendMessage);
   
