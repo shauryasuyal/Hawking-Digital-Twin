@@ -58,7 +58,7 @@ let ragReady = false;
  */
 app.post('/api/chat', async (req, res) => {
   try {
-    const { message, sessionId, reporterName } = req.body;
+    const { message, sessionId, reporterName, apiKeys } = req.body;
 
     if (!message || typeof message !== 'string') {
       return res.status(400).json({ error: 'Missing or invalid "message" field.' });
@@ -93,7 +93,7 @@ Core Directives:
     const memoryContext = getMemory(sessionId);
 
     // 3. Generate the persona-driven response
-    const response = await generateResponse(message, sources, memoryContext, reporterName);
+    const response = await generateResponse(message, sources, memoryContext, reporterName, apiKeys);
 
     // 4. Persist the exchange
     addToMemory(sessionId, message, response);
