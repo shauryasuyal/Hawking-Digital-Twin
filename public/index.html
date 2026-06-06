@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A Digital Twin of Stephen Hawking — An immersive AI experience where you interview the legendary physicist in his Cambridge office.">
-  <title>Hawking Digital Twin</title>
+  <title>Stephen Hawking — Digital Twin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -30,9 +30,10 @@
         Centre for Theoretical Cosmology<br>
         <span style="display: block; margin-top: 1rem; color: #94a3b8; font-style: italic;">Visitor Sign-in:</span>
       </p>
-      <div class="onboarding-input-group">
+      <div class="onboarding-input-group" style="display: flex; flex-direction: column; gap: 1rem;">
         <input type="text" id="reporter-name-input" class="onboarding-input" placeholder="Enter your name..." autocomplete="off">
-        <button id="btn-next-phase" class="btn-primary">Next</button>
+
+        <button id="btn-next-phase" class="btn-primary" style="margin-top: 0.5rem;">Next</button>
       </div>
     </div>
 
@@ -40,16 +41,38 @@
     <div id="onboarding-phase-2" class="onboarding-phase hidden">
       <h2 class="onboarding-context-title" style="font-family: 'Special Elite', serif; font-weight: 400; color: #fcd34d;">Office Hours</h2>
       <p class="onboarding-context-text" style="font-size: 1rem;">
-        Please wait. Professor Hawking is preparing for the interview.<br>
-        <span style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem; display: block;">(Digital Twin Interface Loading)</span>
+        Please wait. Professor Hawking is preparing for the interview.
       </p>
-      <p class="onboarding-context-sub">Please wait while the knowledge base initializes...</p>
-      <div class="onboarding-status-container">
+      <div class="onboarding-status-container" style="margin-bottom: 1.5rem;">
          <div class="loading-bar-container">
            <div class="loading-bar" id="onboarding-loading-bar"></div>
          </div>
       </div>
-      <button id="btn-enter-room" class="btn-primary hidden">Enter Room</button>
+      
+      <div class="onboarding-input-group" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+        <div>
+          <input type="text" id="api-keys-input" class="onboarding-input" placeholder="Enter Gemini API Key(s) (comma separated)..." autocomplete="off" style="width: 100%;">
+          <div style="text-align: center; margin-top: 0.75rem;">
+            <a href="#" id="how-to-key-btn" style="color: #fcd34d; font-size: 0.85rem; text-decoration: underline; opacity: 0.9; transition: opacity 0.2s;">How to get an API Key?</a>
+          </div>
+        </div>
+        
+        <!-- How To Key Modal -->
+        <div id="how-to-key-modal" class="hidden" style="background: rgba(15, 23, 42, 0.95); border: 1px solid #334155; padding: 1rem; border-radius: 8px; font-size: 0.85rem; color: #cbd5e1; text-align: left; line-height: 1.5;">
+          <h4 style="color: #fcd34d; margin-top: 0; margin-bottom: 0.5rem; font-size: 0.95rem;">Getting a Gemini API Key</h4>
+          <ol style="margin-top: 0; padding-left: 1.2rem;">
+            <li style="margin-bottom: 0.3rem;">Go to <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color: #60a5fa;">Google AI Studio</a>.</li>
+            <li style="margin-bottom: 0.3rem;">Sign in with your Google account.</li>
+            <li style="margin-bottom: 0.3rem;">Click the <strong>"Create API key"</strong> button.</li>
+            <li>Copy the key and paste it here. (You can paste multiple keys separated by commas to increase your limit!)</li>
+          </ol>
+          <div style="text-align: right; margin-top: 0.5rem;">
+            <button id="close-how-to-btn" style="background: transparent; border: 1px solid #64748b; color: #cbd5e1; padding: 0.2rem 0.5rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">Close</button>
+          </div>
+        </div>
+
+        <button id="btn-enter-room" class="btn-primary hidden">Enter Room</button>
+      </div>
     </div>
     
   </div>
@@ -190,8 +213,11 @@
       <div class="memory-content" id="memory-content">
         <div class="memory-section">
           <h4>Settings</h4>
-          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem;">
+          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem; margin-bottom: 8px;">
             <input type="checkbox" id="toggle-voice" checked> Enable Voice Synthesizer
+          </label>
+          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem;">
+            <input type="checkbox" id="toggle-fluid-mode"> Enable Immersive Fullscreen Mode
           </label>
         </div>
         <div class="memory-section">
