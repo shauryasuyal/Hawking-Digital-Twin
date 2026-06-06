@@ -1,0 +1,71 @@
+THE LARGE SCALE STRUCTURE OF SPACE-TIME (1973)
+Stephen W. Hawking and G.F.R. Ellis
+Cambridge University Press
+
+OVERVIEW
+
+"The Large Scale Structure of Space-Time" is Hawking's most important technical textbook, co-authored with George F.R. Ellis and published in 1973 by Cambridge University Press. It is the definitive mathematical treatment of global methods in general relativity — the tools used to analyse the large-scale geometry and topology of spacetime, including singularities and black holes. It remains a standard graduate-level reference in mathematical physics and general relativity more than fifty years after its publication.
+
+This book is the rigorous mathematical foundation underlying all of Hawking's popular discussions of black holes, the Big Bang singularity, and the structure of spacetime. Where A Brief History of Time tells readers what Hawking discovered, this book shows the mathematical machinery by which he discovered it.
+
+BACKGROUND
+
+In the 1960s, Roger Penrose revolutionised the mathematical study of general relativity by developing "global methods" — topological and differential geometric techniques that allow physicists to draw conclusions about the overall structure of spacetime without solving Einstein's equations explicitly. Hawking extended and refined these methods, applying them to cosmological settings. The results were the singularity theorems: a series of mathematical proofs showing that, under very general conditions, spacetime must contain singularities — regions where curvature becomes infinite and the laws of physics break down.
+
+The Large Scale Structure of Space-Time was written to provide a comprehensive, rigorous account of these methods and results.
+
+CONTENTS
+
+Chapter 1: The Role of Gravity
+The book opens by motivating the study of spacetime structure. Gravity, unlike the other forces, is always attractive and cannot be shielded. In the long run, gravity dominates, leading to the collapse of matter and the formation of singularities. The chapter sets up the mathematical framework: manifolds, tensor fields, and Einstein's field equations.
+
+Chapter 2: Differential Geometry
+A thorough treatment of the differential geometry needed for the rest of the book: manifolds, tangent spaces, connections, curvature tensors (Riemann, Ricci, Weyl), geodesics, and the Raychaudhuri equation. This chapter is dense and demanding, suitable for graduate students with a background in pure mathematics.
+
+Chapter 3: General Relativity
+The physical content of general relativity: Einstein's field equations, the energy conditions (weak, strong, dominant), the equivalence principle, and examples of exact solutions (Schwarzschild black holes, Friedmann-Robertson-Walker cosmological models).
+
+Chapter 4: The Physical Significance of Curvature
+Discussion of the physical meaning of various curvature quantities: tidal forces, geodesic deviation, and the focusing of light rays and matter. The Raychaudhuri equation, which describes how a bundle of geodesics converges or diverges, is central to the singularity theorems.
+
+Chapter 5: Exact Solutions
+A survey of the most important exact solutions to Einstein's equations, including the Schwarzschild, Reissner-Nordström, Kerr, and Kerr-Newman solutions for black holes, and the various cosmological models.
+
+Chapter 6: Causal Structure
+The core of the book's mathematical machinery. Hawking and Ellis develop the theory of causal structure: the causal future and past of a set of events, achronal sets, Cauchy surfaces, and globally hyperbolic spacetimes. These concepts allow precise definitions of black holes, singularities, and the event horizon.
+
+Chapter 7: The Cauchy Problem in General Relativity
+Discussion of the initial value problem — how a spacetime evolves from given initial data — and the conditions under which this is well-posed.
+
+Chapter 8: Space-Time Singularities
+The heart of the book. Hawking and Ellis define spacetime singularities rigorously (as incomplete geodesics), then prove a series of singularity theorems under different energy conditions and global conditions. The theorems show that:
+- Any spacetime satisfying reasonable energy conditions and containing a trapped surface must contain a singularity (Penrose, 1965, for black holes)
+- Any spacetime satisfying reasonable energy conditions and containing a closed trapped surface or a compact Cauchy surface must be singular (Hawking, 1967, for cosmology)
+- Under very general conditions, any spacetime with a Cauchy surface satisfying reasonable energy conditions must contain a singularity (Hawking-Penrose, 1970)
+
+Chapter 9: Gravitational Radiation
+Discussion of gravitational waves, the quadrupole formula, and the emission of radiation by gravitational collapse.
+
+Chapter 10: The Initial Singularity of the Universe
+Application of the singularity theorems to cosmology, demonstrating that under very general conditions the universe must have begun in a Big Bang singularity.
+
+APPENDICES
+Mathematical appendices on topology, differential geometry, and the theory of fibre bundles.
+
+THE HAWKING-PENROSE SINGULARITY THEOREMS
+
+The most celebrated mathematical results in the book are the singularity theorems, particularly the Hawking-Penrose theorem of 1970. The theorem states, roughly:
+
+A spacetime M cannot be timelike and null geodesically complete if:
+(a) R_{ab}k^a k^b ≥ 0 for all causal vectors k (the strong energy condition)
+(b) There exists a closed trapped surface, a compact achronal set, or a point p such that all future directed null geodesics from p start to converge
+(c) The generic condition holds
+(d) There are no closed timelike curves
+
+This theorem, proved using the methods developed throughout the book, established beyond doubt that singularities are a generic feature of general relativity — not an artefact of special symmetry assumptions — and earned Hawking and Penrose the 2020 Wolf Prize in Physics (shared with Penrose's Nobel Prize).
+
+SIGNIFICANCE AND LEGACY
+
+The Large Scale Structure of Space-Time established the mathematical framework that all subsequent work on black holes, singularities, and cosmological structure has used. It remains in print and in active use. Every serious student of general relativity must engage with it. The methods developed in this book — trapped surfaces, Cauchy horizons, global hyperbolicity — are the language in which modern discussions of black hole physics are conducted.
+
+Hawking himself described it as the work of which he was most scientifically proud in a technical sense. The popular books translated these ideas for the public; this book is where the ideas were actually forged.

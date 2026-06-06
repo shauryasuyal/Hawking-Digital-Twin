@@ -1,0 +1,84 @@
+ON THE SHOULDERS OF GIANTS (2002) and GOD CREATED THE INTEGERS (2005)
+Edited by Stephen Hawking
+Running Press / Running Press Book Publishers
+
+=============================================================================
+ON THE SHOULDERS OF GIANTS: THE GREAT WORKS OF PHYSICS AND ASTRONOMY (2002)
+=============================================================================
+
+OVERVIEW
+
+"On the Shoulders of Giants: The Great Works of Physics and Astronomy" was edited and introduced by Stephen Hawking, published in 2002 by Running Press. The title is a reference to Isaac Newton's famous remark: "If I have seen further it is by standing on the shoulders of Giants." The book is an anthology of the original, complete texts of five landmark works in the history of physics and astronomy, each with a biographical introduction written by Hawking himself.
+
+The book was conceived as a way to allow modern readers to encounter the great scientific revolutions in the words of the people who made them, with Hawking as their guide.
+
+THE FIVE WORKS INCLUDED
+
+1. Nicolaus Copernicus — On the Revolutions of the Celestial Spheres (1543)
+The work that displaced Earth from the centre of the universe, proposing that Earth and the other planets orbit the Sun. Hawking's introduction discusses why Copernicus was reluctant to publish (he feared ridicule), what his heliocentric model actually said, and why it was both revolutionary and still imperfect (Copernicus retained circular orbits, which Kepler later corrected).
+
+2. Galileo Galilei — Dialogues Concerning Two New Sciences (1638)
+Galileo's masterwork on mechanics — the physics of motion, acceleration, and the strength of materials. This book, written while Galileo was under house arrest after his conflict with the Inquisition, laid the mathematical foundations for Newton. Hawking's introduction covers Galileo's life, his observations with the telescope, his conflict with the Church, and his lasting contribution to the scientific method.
+
+3. Johannes Kepler — Harmonies of the World (1619) [Book 5]
+Kepler's discovery of the third law of planetary motion: that the square of a planet's orbital period is proportional to the cube of its average distance from the Sun. Hawking's introduction explains Kepler's mystical-mathematical worldview and how his precise empirical laws provided the observational foundation that Newton explained theoretically.
+
+4. Isaac Newton — Principia Mathematica (1687)
+The greatest work in the history of physics. Newton's Principia establishes the three laws of motion and the law of universal gravitation, and uses them to explain everything from falling apples to the orbits of planets and the shape of Earth. Hawking's introduction calls the Principia "the most influential book in the history of science" and explains its structure and significance.
+
+5. Albert Einstein — The Principle of Relativity (collected papers)
+A collection of Einstein's original papers on special and general relativity, including "On the Electrodynamics of Moving Bodies" (1905, special relativity) and "The Foundation of the General Theory of Relativity" (1916). Hawking's introduction traces Einstein's intellectual journey and explains why both theories were revolutionary.
+
+HAWKING'S OWN ASSESSMENT
+Hawking writes in the introduction: "Each of these five texts marks a turning point in our understanding of the physical world. To read them is to encounter minds of extraordinary power thinking through problems of extraordinary difficulty — and winning."
+
+=============================================================================
+GOD CREATED THE INTEGERS: THE MATHEMATICAL BREAKTHROUGHS THAT CHANGED HISTORY (2005)
+=============================================================================
+
+OVERVIEW
+
+"God Created the Integers: The Mathematical Breakthroughs That Changed History" was edited and introduced by Stephen Hawking, published in 2005 by Running Press. The title quotes Leopold Kronecker: "God created the integers, all else is the work of man." It is an anthology of the most important works in the history of mathematics, covering more than 2,500 years from Euclid to Alan Turing, each with a biographical and contextual introduction by Hawking.
+
+The book is the mathematical companion to "On the Shoulders of Giants," extending Hawking's project of bringing great primary scientific texts to a general audience.
+
+THE MATHEMATICIANS AND WORKS INCLUDED
+
+1. Euclid — Elements (c. 300 BC)
+The most influential mathematics textbook in history. Euclid's Elements established plane geometry through the axiomatic method: beginning with five postulates and deriving all of geometry from them by pure logical deduction. For over 2,000 years this was the model for rigorous mathematical thinking. Hawking's introduction discusses the axiomatic method and why Euclid's fifth postulate (the parallel postulate) would eventually lead to non-Euclidean geometries — which Einstein used in general relativity.
+
+2. Archimedes — Selected Works
+Including The Measurement of a Circle, On the Equilibrium of Planes, The Sand-Reckoner, On Floating Bodies. Archimedes anticipated integral calculus by computing areas and volumes using the method of exhaustion. He also formulated the principles of the lever and of buoyancy (Archimedes' principle). Hawking notes that Archimedes was arguably the greatest mathematician of antiquity.
+
+3. Diophantus — Arithmetica (selections)
+The founder of algebra, Diophantus worked with polynomial equations and number theory. He is most famous because a marginal note in a copy of Arithmetica — written by Pierre de Fermat — gave rise to "Fermat's Last Theorem," which took 358 years to prove.
+
+4. René Descartes — Geometry (1637)
+Descartes invented analytic geometry — the unification of algebra and geometry through the coordinate system. By representing geometric curves as algebraic equations, he made it possible to study geometry using algebraic manipulation and vice versa. This was essential for the development of calculus.
+
+5. Isaac Newton — Principia Mathematica (excerpts) and other mathematical works
+Newton's invention of calculus (simultaneously and independently invented by Leibniz) and its application to mechanics.
+
+6. Leonhard Euler — Selected Works
+The most prolific mathematician in history. Euler contributed to every branch of mathematics and introduced much of modern mathematical notation, including e (the base of natural logarithm), i (the imaginary unit), π, and the function notation f(x). He proved Euler's identity: e^(iπ) + 1 = 0, which Hawking calls "the most beautiful equation in mathematics."
+
+7. Carl Friedrich Gauss — Disquisitiones Arithmeticae (1801)
+Gauss's masterwork on number theory, which transformed the subject into a rigorous modern discipline. Hawking's introduction discusses Gauss's extraordinary mathematical gifts (he is often called the "Prince of Mathematics") and his contributions to statistics, physics, and astronomy.
+
+8. Augustin-Louis Cauchy — Course of Analysis (selections)
+Cauchy put calculus on a rigorous logical foundation, introducing the modern definitions of limits, continuity, and convergence that are standard today.
+
+9. Georg Friedrich Bernhard Riemann — On the Hypotheses Which Lie at the Foundations of Geometry (1854)
+Riemann's revolutionary lecture introducing the concept of a Riemannian manifold — a space that can be curved in an arbitrary manner. This mathematical framework, generalising Euclidean geometry, was exactly what Einstein needed for general relativity sixty years later. Hawking emphasises that without Riemann's geometry, Einstein could not have formulated his theory.
+
+10. Ernst Zermelo (with others) — Set Theory
+The axiomatisation of set theory, which provides the logical foundations for all of modern mathematics.
+
+11. Kurt Gödel — On Formally Undecidable Propositions of Principia Mathematica and Related Systems (1931)
+Gödel's incompleteness theorems: in any sufficiently powerful formal mathematical system, there are true statements that cannot be proved within that system. This was one of the most profound and unsettling results in the history of mathematics, demonstrating the inherent limits of formal reasoning. Hawking is fascinated by Gödel's theorems and their implications for the project of a Theory of Everything.
+
+12. Alan Turing — On Computable Numbers, With an Application to the Entscheidungsproblem (1936)
+Turing's paper that founded theoretical computer science by introducing the concept of the Turing machine — an abstract model of computation. Turing showed that some mathematical problems are undecidable — no algorithm can solve them — extending Gödel's incompleteness results. Hawking writes a warm appreciation of Turing, noting that his treatment by the British government (he was prosecuted for homosexuality and chemically castrated) was a "disgrace."
+
+HAWKING'S VIEW ON MATHEMATICS
+Hawking writes: "Mathematics is the language in which the book of nature is written." He believes that mathematical structure is not invented by humans but discovered — that the deep mathematical patterns we find in nature reflect genuine features of physical reality. The anthology is his celebration of the human minds who discovered these patterns.
