@@ -232,20 +232,12 @@ document.addEventListener('DOMContentLoaded', () => {
       initParticles();
       fetchMemoryDashboard();
       
-      // ── Restore previous conversation ────────────────────────────────────────
-      const sessions = getSessions();
-      if (sessions.length > 0) {
-        // Load the most recent session
-        const lastSession = sessions[0];
-        switchSession(lastSession.id, false);
-      } else {
-        // Fresh visitor — play the greeting
-        createNewSession();
-        setTimeout(() => {
-          questionInput.focus();
-          speakAndTypePages(`Ah. So you are the reporter they sent to interview me, ${reporterName}?`);
-        }, 500);
-      }
+      // Always start a new session when entering
+      createNewSession();
+      setTimeout(() => {
+        questionInput.focus();
+        speakAndTypePages(`Ah. So you are the reporter they sent to interview me, ${reporterName}?`);
+      }, 500);
     }, 1500);
   });
 
@@ -303,8 +295,29 @@ document.addEventListener('DOMContentLoaded', () => {
       const d = new Date(session.timestamp);
       date.textContent = d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
       
+      const delBtn = document.createElement('button');
+      delBtn.className = 'session-delete-btn';
+      delBtn.title = 'Delete Session';
+      delBtn.innerHTML = '×';
+      delBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (confirm('Delete this conversation session?')) {
+          const newSessions = getSessions().filter(s => s.id !== session.id);
+          saveSessions(newSessions);
+          localStorage.removeItem(getHistoryKey(session.id));
+          
+          if (session.id === sessionId) {
+            // Deleted the active session, start a new one
+            createNewSession();
+          } else {
+            renderSessionsList();
+          }
+        }
+      });
+      
       el.appendChild(title);
       el.appendChild(date);
+      el.appendChild(delBtn);
       
       el.addEventListener('click', () => switchSession(session.id, true));
       sessionsList.appendChild(el);
@@ -870,7 +883,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── Settings: Clear Chat ───────────────────────────────────────────────────
+  const btnClearCurrentChat = document.getElementById('btn-clear-current-chat');
   const btnClearChat = document.getElementById('btn-clear-chat');
+  
+  if (btnClearCurrentChat) {
+    btnClearCurrentChat.addEventListener('click', () => {
+      if (!sessionId) return;
+      if (confirm('Clear the history of the current conversation?')) {
+        // Clear just this session's history
+        localStorage.removeItem(getHistoryKey(sessionId));
+        conversationHistory = [];
+        
+        screenContent.innerHTML = '<span class="cursor-blink">_</span>';
+        
+        // Tell the server to reset this session
+        fetch(`/api/session/${sessionId}`, { method: 'DELETE' })
+          .catch(e => console.error('Session reset error:', e));
+          
+        memoryPanel.classList.add('hidden');
+        setTimeout(() => {
+          speakAndTypePages('Current memory bank cleared. Proceed.');
+        }, 300);
+      }
+    });
+  }
+
   if (btnClearChat) {
     btnClearChat.addEventListener('click', () => {
       if (confirm('Clear your entire conversation history across ALL sessions? This cannot be undone.')) {
