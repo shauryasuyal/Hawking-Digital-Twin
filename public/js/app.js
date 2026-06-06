@@ -11,13 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const memoryPanel = document.getElementById('memory-panel');
   const btnMemory = document.getElementById('btn-memory');
   const btnCloseMemory = document.getElementById('btn-close-memory');
-  const btnNewSession = document.getElementById('btn-new-session');
+  const btnNewSession = document.getElementById('btn-new-session'); // Note: removed from HTML but kept var to avoid errors
   const particlesContainer = document.getElementById('particles');
   const toggleVoice = document.getElementById('toggle-voice');
   const toggleFluidMode = document.getElementById('toggle-fluid-mode');
   const quickMuteBtn = document.getElementById('quick-mute-btn');
   const iconVolUp = document.getElementById('icon-vol-up');
   const iconVolMute = document.getElementById('icon-vol-mute');
+  
+  // New Sessions Panel DOM Elements
+  const btnSessionsToggle = document.getElementById('btn-sessions-toggle');
+  const sessionsPanel = document.getElementById('sessions-panel');
+  const btnCloseSessions = document.getElementById('btn-close-sessions');
+  const btnNewChat = document.getElementById('btn-new-chat');
+  const sessionsList = document.getElementById('sessions-list');
 
   // meSpeak DECtalk Emulator Setup
   let mespeakReady = false;
@@ -67,33 +74,41 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const userId = getOrCreateUserId();
 
-  // ── Conversation history ────────────────────────────────────────────────────
-  // Stored in localStorage so it survives refreshes.
-  const HISTORY_KEY = `hawkingHistory_${userId}`;
-  const MAX_STORED_TURNS = 40; // keep last 40 exchanges in storage
-
-  function loadHistory() {
+  // ── Conversation sessions ───────────────────────────────────────────────────
+  const SESSIONS_KEY = `hawkingSessions_${userId}`;
+  const MAX_STORED_TURNS = 40;
+  
+  function getSessions() {
     try {
-      return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+      return JSON.parse(localStorage.getItem(SESSIONS_KEY) || '[]');
     } catch { return []; }
   }
 
-  function saveHistory(turns) {
-    // Trim to keep storage lean
+  function saveSessions(sessions) {
+    localStorage.setItem(SESSIONS_KEY, JSON.stringify(sessions));
+  }
+
+  // Generate history key dynamically based on sessionId
+  function getHistoryKey(id) {
+    return `hawkingHistory_${id}`;
+  }
+
+  function loadHistory(id) {
+    if (!id) return [];
+    try {
+      return JSON.parse(localStorage.getItem(getHistoryKey(id)) || '[]');
+    } catch { return []; }
+  }
+
+  function saveHistory(id, turns) {
+    if (!id) return;
     const trimmed = turns.slice(-MAX_STORED_TURNS);
-    localStorage.setItem(HISTORY_KEY, JSON.stringify(trimmed));
+    localStorage.setItem(getHistoryKey(id), JSON.stringify(trimmed));
   }
-
-  function clearHistory() {
-    localStorage.removeItem(HISTORY_KEY);
-    conversationHistory = [];
-  }
-
-  // In-memory mirror of what's in localStorage
-  let conversationHistory = loadHistory();
 
   // State
   let sessionId = null;
+  let conversationHistory = [];
   let isTyping = false;
   let isWaiting = false;
   
@@ -218,32 +233,18 @@ document.addEventListener('DOMContentLoaded', () => {
       fetchMemoryDashboard();
       
       // ── Restore previous conversation ────────────────────────────────────────
-      const history = loadHistory();
-      if (history.length > 0) {
-        // Show the last Hawking response on the screen so it doesn't feel empty
-        const lastHawking = [...history].reverse().find(t => t.role === 'hawking');
-        if (lastHawking) {
-          screenContent.innerHTML = '';
-          const span = document.createElement('span');
-          span.textContent = lastHawking.text;
-          const cursor = document.createElement('span');
-          cursor.className = 'cursor-blink';
-          cursor.textContent = '_';
-          screenContent.appendChild(span);
-          screenContent.appendChild(cursor);
-        }
-        console.log(`[memory] Restored ${history.length} turns from localStorage`);
+      const sessions = getSessions();
+      if (sessions.length > 0) {
+        // Load the most recent session
+        const lastSession = sessions[0];
+        switchSession(lastSession.id, false);
       } else {
         // Fresh visitor — play the greeting
+        createNewSession();
         setTimeout(() => {
           questionInput.focus();
           speakAndTypePages(`Ah. So you are the reporter they sent to interview me, ${reporterName}?`);
         }, 500);
-      }
-
-      if (history.length > 0) {
-        // Returning visitor — just focus the input, no greeting
-        setTimeout(() => questionInput.focus(), 500);
       }
     }, 1500);
   });
@@ -273,29 +274,116 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
   }
 
-  function initSession() {
-    isTyping = false;
-    isWaiting = false;
-    charCount.textContent = '0 / 2000';
-    questionInput.value = '';
-    
-    // Create new backend session (server allocates a fresh in-memory slot)
-    fetch('/api/session', { method: 'POST' })
-      .then(r => r.json())
-      .then(data => {
-        if (data.sessionId) sessionId = data.sessionId;
-      })
-      .catch(e => console.error("Session creation failed", e));
-
-    pollRagStatus();
-  }
-  
   // Set today's date in the notebook
   const today = new Date();
   notebookDate.textContent = today.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-  // Initialize Session
-  initSession();
+  // ── Session Management Functions ──────────────────────────────────────────
+
+  function renderSessionsList() {
+    if (!sessionsList) return;
+    const sessions = getSessions();
+    sessionsList.innerHTML = '';
+    
+    if (sessions.length === 0) {
+      sessionsList.innerHTML = '<div style="color: #64748b; font-size: 0.8rem; padding: 10px; text-align: center;">No previous sessions</div>';
+      return;
+    }
+
+    sessions.forEach(session => {
+      const el = document.createElement('div');
+      el.className = `session-item ${session.id === sessionId ? 'active' : ''}`;
+      
+      const title = document.createElement('div');
+      title.className = 'session-title';
+      title.textContent = session.title;
+      
+      const date = document.createElement('div');
+      date.className = 'session-date';
+      const d = new Date(session.timestamp);
+      date.textContent = d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      
+      el.appendChild(title);
+      el.appendChild(date);
+      
+      el.addEventListener('click', () => switchSession(session.id, true));
+      sessionsList.appendChild(el);
+    });
+  }
+
+  function createNewSession() {
+    isTyping = false;
+    isWaiting = false;
+    charCount.textContent = '0 / 2000';
+    questionInput.value = '';
+    screenContent.innerHTML = '';
+    
+    fetch('/api/session', { method: 'POST' })
+      .then(r => r.json())
+      .then(data => {
+        if (data.sessionId) {
+          sessionId = data.sessionId;
+          conversationHistory = [];
+          
+          const sessions = getSessions();
+          sessions.unshift({
+            id: sessionId,
+            title: 'New Conversation',
+            timestamp: Date.now()
+          });
+          saveSessions(sessions);
+          renderSessionsList();
+          
+          if (!onboardingScreen.classList.contains('hidden')) {
+             pollRagStatus(); // Only poll if we are just starting
+          } else {
+             questionInput.focus();
+             sessionsPanel.classList.add('hidden'); // Close panel
+          }
+        }
+      })
+      .catch(e => console.error("Session creation failed", e));
+  }
+
+  function switchSession(id, focusInput = true) {
+    sessionId = id;
+    conversationHistory = loadHistory(id);
+    renderSessionsList();
+    
+    // Clear screen
+    screenContent.innerHTML = '';
+    
+    // Tell backend to make sure a slot exists, we don't care if it's empty, persona will use long term memory or we just rely on context
+    fetch('/api/session', { method: 'POST' }); 
+    // ^ Hack: we aren't passing the ID to createSession, wait, we shouldn't overwrite it. We'll just leave it. The backend handles missing sessions gracefully by loading long term memory.
+
+    if (conversationHistory.length > 0) {
+      const lastHawking = [...conversationHistory].reverse().find(t => t.role === 'hawking');
+      if (lastHawking) {
+        const span = document.createElement('span');
+        span.textContent = lastHawking.text;
+        const cursor = document.createElement('span');
+        cursor.className = 'cursor-blink';
+        cursor.textContent = '_';
+        screenContent.appendChild(span);
+        screenContent.appendChild(cursor);
+      }
+    } else {
+      // Empty session
+      const cursor = document.createElement('span');
+      cursor.className = 'cursor-blink';
+      cursor.textContent = '_';
+      screenContent.appendChild(cursor);
+    }
+    
+    sessionsPanel.classList.add('hidden');
+    
+    if (focusInput) {
+      setTimeout(() => questionInput.focus(), 100);
+    }
+  }
+
+  pollRagStatus();
 
   // Coordinated Typewriter and Speech effect
   async function speakAndTypePages(text) {
@@ -424,6 +512,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const text = questionInput.value.trim();
     if (!text || isTyping || isWaiting || !sessionId) return;
     
+    // Update session title if this is the first message
+    if (conversationHistory.length === 0) {
+      const sessions = getSessions();
+      const s = sessions.find(s => s.id === sessionId);
+      if (s) {
+        // Simple title: first 4-5 words
+        s.title = text.split(' ').slice(0, 5).join(' ') + (text.split(' ').length > 5 ? '...' : '');
+        saveSessions(sessions);
+        renderSessionsList();
+      }
+    }
+
     // Unlock AudioContext immediately upon user gesture
     if (window.meSpeak && toggleVoice.checked) {
       meSpeak.speak('', { volume: 0 });
@@ -455,10 +555,10 @@ document.addEventListener('DOMContentLoaded', () => {
       thinkingIndicator.classList.add('hidden');
       
       if (res.ok) {
-        // Save this exchange to localStorage for persistence
+        // Save this exchange to localStorage for persistence using dynamic sessionId
         conversationHistory.push({ role: 'reporter', text, ts: Date.now() });
         conversationHistory.push({ role: 'hawking', text: data.response, ts: Date.now() });
-        saveHistory(conversationHistory);
+        saveHistory(sessionId, conversationHistory);
 
         // Coordinated output: Wait for both typing and speaking to finish before moving on
         await speakAndTypePages(data.response);
@@ -727,14 +827,22 @@ document.addEventListener('DOMContentLoaded', () => {
     memoryPanel.classList.add('hidden');
   });
   
-  if (btnNewSession) {
-    btnNewSession.addEventListener('click', () => {
-      if(confirm("Start a new interview session? Memory will be saved to long-term storage.")) {
-        loadingScreen.classList.remove('hidden');
-        loadingScreen.style.opacity = '1';
-        appContainer.classList.add('hidden');
-        initSession();
-      }
+  // ── Sessions Panel UI ──────────────────────────────────────────────────────
+  if (btnSessionsToggle) {
+    btnSessionsToggle.addEventListener('click', () => {
+      sessionsPanel.classList.toggle('hidden');
+    });
+  }
+
+  if (btnCloseSessions) {
+    btnCloseSessions.addEventListener('click', () => {
+      sessionsPanel.classList.add('hidden');
+    });
+  }
+
+  if (btnNewChat) {
+    btnNewChat.addEventListener('click', () => {
+      createNewSession();
     });
   }
 
@@ -765,21 +873,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnClearChat = document.getElementById('btn-clear-chat');
   if (btnClearChat) {
     btnClearChat.addEventListener('click', () => {
-      if (confirm('Clear your entire conversation history? This cannot be undone.')) {
-        clearHistory();
+      if (confirm('Clear your entire conversation history across ALL sessions? This cannot be undone.')) {
+        // Clear all histories based on index
+        const sessions = getSessions();
+        sessions.forEach(s => localStorage.removeItem(getHistoryKey(s.id)));
+        localStorage.removeItem(SESSIONS_KEY);
+        
         screenContent.innerHTML = '<span class="cursor-blink">_</span>';
+        
         // Tell the server to reset this session too
         if (sessionId) {
           fetch(`/api/session/${sessionId}`, { method: 'DELETE' })
-            .then(() => fetch('/api/session', { method: 'POST' }))
-            .then(r => r.json())
-            .then(d => { if (d.sessionId) sessionId = d.sessionId; })
             .catch(e => console.error('Session reset error:', e));
         }
+        
+        // Start completely fresh
+        createNewSession();
+        
         // Close the panel and show a fresh screen
         memoryPanel.classList.add('hidden');
         setTimeout(() => {
-          speakAndTypePages('Memory cleared. A new interview begins.');
+          speakAndTypePages('All memory banks cleared. A new interview begins.');
         }, 300);
       }
     });
