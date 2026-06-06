@@ -3,6 +3,8 @@
 Welcome to the **AIMS DTU Summer Project 2026: Digital Twin of a Scientist**. 
 This project successfully implements a deeply authentic, interactive digital twin of Professor Stephen Hawking, bringing together his scientific knowledge, dry wit, and distinct communicative style.
 
+Demo Link : https://hawking-digital-twin-production.up.railway.app/
+
 ## Overview
 
 Most chatbots answer in a generic voice. A Digital Twin is different: it feels like a specific person. 
