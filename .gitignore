@@ -1,0 +1,10 @@
+node_modules/
+.env
+data/memory/*.json
+
+# Large video assets (not needed for deployment)
+*.mp4
+
+# OS files
+.DS_Store
+Thumbs.db
