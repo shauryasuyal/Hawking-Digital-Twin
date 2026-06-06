@@ -258,11 +258,17 @@
             <div id="api-key-update-msg" style="font-size:0.75rem; color:#4ade80; margin-top:4px; display:none;">✓ Key updated successfully</div>
           </div>
 
-          <!-- Clear Chat -->
-          <button id="btn-clear-chat" style="width:100%; background:transparent; border:1px solid #7f1d1d; color:#fca5a5; padding:7px 12px; border-radius:6px; font-size:0.82rem; cursor:pointer; font-family:inherit; transition:background 0.2s;"
-            onmouseover="this.style.background='rgba(127,29,29,0.3)'" onmouseout="this.style.background='transparent'">
-            🗑️ Clear Conversation History
-          </button>
+          <!-- Clear Chats -->
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <button id="btn-clear-current-chat" style="width:100%; background:transparent; border:1px solid #b45309; color:#fcd34d; padding:7px 12px; border-radius:6px; font-size:0.82rem; cursor:pointer; font-family:inherit; transition:background 0.2s;"
+              onmouseover="this.style.background='rgba(180,83,9,0.3)'" onmouseout="this.style.background='transparent'">
+              🗑️ Clear Current Conversation
+            </button>
+            <button id="btn-clear-chat" style="width:100%; background:transparent; border:1px solid #7f1d1d; color:#fca5a5; padding:7px 12px; border-radius:6px; font-size:0.82rem; cursor:pointer; font-family:inherit; transition:background 0.2s;"
+              onmouseover="this.style.background='rgba(127,29,29,0.3)'" onmouseout="this.style.background='transparent'">
+              ⚠️ Clear All Conversations
+            </button>
+          </div>
         </div>
         <div class="memory-section">
           <h4>Session Info</h4>
