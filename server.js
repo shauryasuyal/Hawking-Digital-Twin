@@ -21,6 +21,37 @@ import {
   createSession,
 } from './src/memory.js';
 
+// ── Off-topic streak tracker ──────────────────────────────────────────────────
+// Counts consecutive non-physics questions per session so persona.js
+// can calibrate Hawking's patience without relying on the LLM to count.
+const offTopicStreaks = new Map(); // sessionId → number
+
+// Physics / science keywords — if a message matches, it is "on-topic"
+const PHYSICS_KEYWORDS = [
+  'black hole', 'event horizon', 'singularity', 'hawking radiation',
+  'quantum', 'relativity', 'spacetime', 'gravity', 'gravitational',
+  'cosmolog', 'universe', 'big bang', 'inflation', 'dark matter',
+  'dark energy', 'entropy', 'thermodynamic', 'string theory', 'm-theory',
+  'wave function', 'superposition', 'entanglement', 'uncertainty principle',
+  'time dilation', 'arrow of time', 'time travel', 'information paradox',
+  'equation', 'theorem', 'calculus', 'topology', 'geometry', 'physics',
+  'mathematics', 'math', 'science', 'scientific', 'particle', 'photon',
+  'electron', 'proton', 'neutron', 'quark', 'boson', 'higgs', 'neutrino',
+  'nuclear', 'electromagnetic', 'light', 'speed of light', 'energy',
+  'mass', 'force', 'dimension', 'multiverse', 'space', 'planet', 'star',
+  'galaxy', 'cosmos', 'telescope', 'nasa', 'mars', 'moon', 'solar',
+  'radiation', 'atom', 'molecule', 'chemistry', 'biology', 'evolution',
+  'brief history', 'brief answers', 'universe in a nutshell', 'grand design',
+  'als', 'motor neuron', 'disability', 'wheelchair', 'speech synthesizer',
+  'cambridge', 'oxford', 'research', 'theory', 'hypothesis', 'experiment',
+  'extraterrestrial', 'alien', 'fermi', 'drake', 'ai', 'artificial intelligence',
+];
+
+function isOnTopic(message) {
+  const lower = message.toLowerCase();
+  return PHYSICS_KEYWORDS.some(kw => lower.includes(kw));
+}
+
 // ── Bootstrap ────────────────────────────────────────────────────────────────
 dotenv.config();
 
@@ -73,18 +104,12 @@ app.post('/api/chat', async (req, res) => {
       });
     }
 
-    const HAWKING_SYSTEM_PROMPT = `
-You are Professor Stephen Hawking.
-You are communicating via your Equalizer wheelchair speech synthesizer.
-You are currently in your office at Cambridge University. A reporter is interviewing you.
-
-Core Directives:
-1. Speak in your characteristic style: brilliant, dryly humorous, philosophical, and determined.
-2. Keep your answers EXTREMELY concise. You type at 1 word per minute using a cheek switch. Do not give long lectures or multi-paragraph answers. Keep every response to a maximum of 2 to 3 short sentences.
-3. If RAG context is provided, use it to inform your answer. If not, rely on your general knowledge.
-4. Never break character. You are the digital twin of the real Stephen Hawking.
-5. NEVER use emojis, markdown formatting, or asterisks (like *smiles*). Output ONLY the raw text that your speech synthesizer will speak.
-`;
+    // ── Off-topic streak tracking ─────────────────────────────────────────────
+    const onTopic = isOnTopic(message);
+    const currentStreak = offTopicStreaks.get(sessionId) || 0;
+    const newStreak = onTopic ? 0 : currentStreak + 1;
+    offTopicStreaks.set(sessionId, newStreak);
+    console.log(`[streak] session=${sessionId} onTopic=${onTopic} streak=${newStreak}`);
 
     // 1. Search the knowledge base for relevant context
     const sources = await searchKnowledge(message);
@@ -92,8 +117,8 @@ Core Directives:
     // 2. Retrieve memory context (short-term + long-term)
     const memoryContext = getMemory(sessionId);
 
-    // 3. Generate the persona-driven response
-    const response = await generateResponse(message, sources, memoryContext, reporterName, apiKeys);
+    // 3. Generate the persona-driven response (pass streak so persona can calibrate tone)
+    const response = await generateResponse(message, sources, memoryContext, reporterName, apiKeys, newStreak);
 
     // 4. Persist the exchange
     addToMemory(sessionId, message, response);
@@ -151,6 +176,8 @@ app.delete('/api/session/:sessionId', (_req, res) => {
   try {
     // createSession effectively resets the slot
     createSession(_req.params.sessionId);
+    // Reset the off-topic streak for this session too
+    offTopicStreaks.delete(_req.params.sessionId);
     console.log(`🗑️  Session cleared: ${_req.params.sessionId}`);
     res.json({ success: true });
   } catch (error) {
